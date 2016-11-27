@@ -2,6 +2,7 @@ var filterSelection = {};
 var sectionSelector = undefined;
 var svgSelection = undefined;
 var currentQuestion = undefined;
+var currentQuestionIndex = 0;
 
 var all_data = 'change2017_full-extract_clean.csv';
 var currentDataName = 'question0';
@@ -389,10 +390,17 @@ function fillQuestion(indexQuestion, section) {
     return;
   }
   d3.select(section + ' .question-label')
-    .html("Question : " + QUESTIONS[indexQuestion].text);
+    .html(QUESTIONS[indexQuestion].text);
 }
 
 function filterDataBy(segment, segmentSelector) {
+  d3.selectAll('.segment')
+    .classed('selected', false)
+    .filter(function() {
+      return segment == d3.select(this).attr('data-segment')
+    })
+    .classed('selected', true);
+
   filtered = currentData.filter(function(d) {
     return d[segmentSelector] == segment
   });
@@ -402,11 +410,19 @@ function filterDataBy(segment, segmentSelector) {
 }
 
 function chooseSegment(data, group) {
+  d3.select(sectionSelector + ' .choose-segment *').remove();
+  d3.select(sectionSelector + ' .choose-segment').html('');
+  if (!data) {
+    d3.select(sectionSelector + ' .choose-segment')
+    .html("Cliquez sur l'un des boutons de catégorie au dessus pour filtrer les données")
+    return;
+  }
   var uniques = data.unique(function(d){
     return d[group]
   }).map(function(d){
     return d[group]
   })
+
 
   var segments = d3.select(sectionSelector + ' .choose-segment')
     .selectAll('.segment')
@@ -416,12 +432,14 @@ function chooseSegment(data, group) {
   segments.enter()
     .append('div')
     .classed('segment', true)
+    .attr('data-segment', function(d){return d;})
     .html(function(d){return d;})
     .on('click', function(d){
       filterDataBy(d, group);
     });
 
   segments
+    .attr('data-segment', function(d){return d;})
     .html(function(d){return d;})
     .on('click', function(d){
       filterDataBy(d, group);
@@ -432,6 +450,13 @@ function chooseSegment(data, group) {
 }
 
 function segmentBy(category) {
+  d3.selectAll('.segment-controls span')
+    .classed('selected', false)
+    .filter(function(){
+      return category == d3.select(this).attr('data-segment');
+    })
+    .classed('selected', true);
+
   // Get csv data
   d3.csv(currentDataName + '-' + category + '.csv')
     .row(function(d) {
@@ -467,6 +492,7 @@ function loadQuestion(indexQuestion) {
   console.log('Loading quesiton ' + indexQuestion)
   currentDataName = 'question' + indexQuestion;
   currentQuestion = QUESTIONS[indexQuestion];
+  currentQuestionIndex = indexQuestion;
   sectionSelector = ".chart-section.chart-section--" + currentQuestion.type
   // Hide home message
   d3.select('.intro').classed('u-hidden', true);
@@ -482,6 +508,7 @@ function loadQuestion(indexQuestion) {
   chartConfig.height = window.innerHeight*0.8;
 
   // Update infos
+  chooseSegment(undefined, sectionSelector);
   fillInfoSegment(undefined, sectionSelector);
   fillQuestion(indexQuestion, sectionSelector);
   d3.csv(currentDataName + '.csv')
@@ -548,11 +575,33 @@ function init(){
   });
   d3.selectAll(".chart-section").classed("u-hidden", true);
   // Init QUESTIONS
-  d3.select(".menu-question-list")
-    .selectAll(".menu-question-item")
-    .data(QUESTIONS)
+  nestedMenu = d3.nest()
+    .key(function(d) { return d.theme; })
+    .entries(QUESTIONS);
+
+  var li = d3.select(".menu-question-list")
+    .selectAll(".menu-question-theme")
+    .data(nestedMenu);
+
+  var _li = li
     .enter()
     .append('li')
+    .classed('menu-question-theme', true)
+    .attr('data-theme', function(d){return d.key;});
+
+  _li
+    .append('div')
+    .classed('menu-question-theme--label', true)
+    .html(function(q){
+      console.log(q);
+      return THEMES[q.key];
+    });
+
+  _li
+    .selectAll('.menu-question-item')
+    .data(function(d){return d.values})
+    .enter()
+    .append('div')
     .classed('menu-question-item', true)
     .html(function(q){
       return q.text
@@ -564,3 +613,24 @@ function init(){
   // loadQuestionAggregates(0);
 }
 init();
+
+function next() {
+  newIndex = currentQuestionIndex + 1;
+  if (newIndex >= QUESTIONS.length) {
+    newIndex = 0;
+  }
+  loadQuestion(newIndex);
+}
+function previous() {
+  newIndex = currentQuestionIndex - 1;
+  if (newIndex < 0) {
+    newIndex = QUESTIONS.length - 1;
+  }
+  loadQuestion(newIndex);
+}
+function toggleMenu() {
+  var isOpen = d3.select('.nav-menu')
+    .classed('nav-menu--open');
+  d3.select('.nav-menu')
+    .classed('nav-menu--open', !isOpen);
+}

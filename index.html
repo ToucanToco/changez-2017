@@ -10,12 +10,15 @@
 
 <body>
   <h1>Data For Good X Change.org</h1>
-  <div class="main">
-    <nav>
-      <div>Accueil</div>
-      <ul class="menu-question-list">
-      </ul>
-    </nav>
+  <nav class="nav-menu">
+    <div class="toggle-menu-handle" onclick="toggleMenu()">MENU</div>
+    <h2>Toutes les questions</h2>
+    <ul class="menu-question-list">
+    </ul>
+
+  </nav>
+
+  <div class="main-column">
 
     <div class="intro">
       Amusez-vous à explorer les réponses des utilisateurs de Change.org.
@@ -23,14 +26,18 @@
       Ce service vous est fourni avec des bisous.
       <div class="go-button" onclick="loadQuestion(11)">On commence ?</div>
     </div>
-
     <div class="chart-section chart-section--leaderboard">
+      <div>
+        <span onclick="previous()" >< Précédent</span>
+        <span> | </span>
+        <span onclick="next()">Suivant ></span>
+      </div>
       <h2 class="question-label">Question: Quelles est la cause qui vous tient le plus à coeur ?</h2>
       <div class="segment-container">
         <div class="segment-controls">
-          <button onclick="segmentBy('age')">Par âge</button>
-          <button onclick="segmentBy('sexe')">Par sexe</button>
-          <button onclick="segmentBy('tendance')">Par tendance politique</button>
+          <span data-segment="age" onclick="segmentBy('age')">Par âge</span>
+          <span data-segment="sexe" onclick="segmentBy('sexe')">Par sexe</span>
+          <span data-segment="tendance" onclick="segmentBy('tendance')">Par tendance politique</span>
         </div>
         <div class="info-segment"></div>
         <div class="choose-segment"></div>
@@ -38,12 +45,17 @@
     </div>
 
     <div class="chart-section chart-section--wordcloud">
+      <div>
+        <span onclick="previous()" >< Précédent</span>
+        <span> | </span>
+        <span onclick="next()">Suivant ></span>
+      </div>
       <h2 class="question-label">Question: Quelles est la cause qui vous tient le plus à coeur ?</h2>
       <div class="segment-container">
         <div class="segment-controls">
-          <button onclick="segmentBy('age')">Par âge</button>
-          <button onclick="segmentBy('sexe')">Par sexe</button>
-          <button onclick="segmentBy('tendance')">Par tendance politique</button>
+          <span data-segment="age" onclick="segmentBy('age')">Par âge</span>
+          <span data-segment="sexe" onclick="segmentBy('sexe')">Par sexe</span>
+          <span data-segment="tendance" onclick="segmentBy('tendance')">Par tendance politique</span>
         </div>
         <div class="info-segment"></div>
         <div class="choose-segment"></div>

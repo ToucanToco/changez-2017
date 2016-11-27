@@ -1,3 +1,10 @@
+/****************/
+/**** COLORS ****/
+/****************/
+/*dark-gray: #202020*/
+/*green: rgb(100, 226, 97)*/
+/*dark red: #88082f*/
+
 html, body {
   padding: 0;
   margin: 0;
@@ -6,6 +13,7 @@ html, body {
 body {
   font: 16px/1.5 "Open Sans", "Helvetica Neue", Helvetica, arial, sans-serif;
   font-weight: 300;
+  color: #202020;
   letter-spacing: 0.1px;
   display: flex;
   flex-wrap: wrap;
@@ -14,7 +22,7 @@ body {
 .u-hidden {
   display: none !important;
 }
-.main {
+.main-column {
   display: flex;
   flex-direction: column;
   width: 800px;
@@ -66,26 +74,122 @@ body {
   font-size: 13px;
 }
 
-.menu-question-item {
-  /*width: 250px;*/
-  list-style-type: none;
-}
-.menu-question-list {
+
+.intro {
   display: flex;
   flex-direction: column;
-  height: 200px;
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px;
 }
 
 .go-button {
   background-color: rgb(100, 226, 97);
   padding: 5px;
   color: white;
+  margin-top: 20px;
+  cursor: pointer;
+  width: 200px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .wordcloud-text {
   text-anchor: middle;
+}
+
+.nav-menu {
+  position: fixed;
+  width: 700px;
+  left: -700px;
+  background: white;
+  transition: all ease 300ms;
+  -webkit-transition: all ease 300ms;
+  -moz-transition: all ease 300ms;
+  -webkit-box-shadow: 4px 4px 20px -2px rgba(0,0,0,0.26);
+  -moz-box-shadow: 4px 4px 20px -2px rgba(0,0,0,0.26);
+  box-shadow: 4px 4px 20px -2px rgba(0,0,0,0.26);
+  height: 100%;
+  overflow: scroll;
+}
+
+.toggle-menu-handle {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgb(100, 226, 97);
+  transition: all ease 300ms;
+  -webkit-transition: all ease 300ms;
+  -moz-transition: all ease 300ms;
+  color: white;
+  width: 65px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+h1 {
+  height: 40px;
+}
+
+.nav-menu.nav-menu--open {
+  left: 0;
+}
+.nav-menu.nav-menu--open .toggle-menu-handle {
+  left: 700px;
+}
+
+.menu-question-list li {
+  /*width: 250px;*/
+  padding: 0;
+  list-style-type: none;
+}
+.menu-question-theme--label {
+  color: rgb(100, 226, 97);
+  font-weight: bold;
+  text-transform: uppercase;
+  padding:5px;
+  margin:0;
+}
+.menu-question-item:hover {
+  background-color: #f2f2f2;
+}
+.menu-question-item {
+  padding:5px;
+  cursor: pointer;
+}
+.menu-question-list {
+  display: flex;
+  flex-direction: column;
+  /*height: 200px;*/
+  height: 100%;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 0;
+}
+
+.segment-container {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.segment-controls {
+  height: 45px;
+}
+.segment-controls span {
+  padding: 10px;
+  border: 1px rgb(100, 226, 97) solid;
+  margin: 3px;
+  transition: all ease 200ms;
+}
+.segment.selected,
+.segment-controls span.selected {
+  background: rgb(100, 226, 97);
+  color: white;
 }
