@@ -73,8 +73,8 @@ function updateWordCloud(data, clear, label, value) {
       if (!d3.select(".wordcloud").node()) {
         console.log('creating wordcloud')
         d3.select(".chart")
-          .classed("wordcloud", true)
           .append("g")
+          .classed("wordcloud", true)
           .classed('text-group', true)
           .attr("transform", "translate(" + chartConfig.width/2 + "," + chartConfig.height/2 + ")");
       }
