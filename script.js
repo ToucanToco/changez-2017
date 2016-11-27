@@ -1,6 +1,7 @@
 var filterSelection = {};
-var sectionSelection = undefined;
+var sectionSelector = undefined;
 var svgSelection = undefined;
+var currentQuestion = undefined;
 
 var all_data = 'change2017_full-extract_clean.csv';
 var currentDataName = 'question0';
@@ -23,8 +24,93 @@ var chartConfig = {
     valueWidthThreshold: 50,
   };
 
-var updateBarChart = function(data, label, value) {
-  console.log('Update barchart', data, label, value);
+function updateWordCloud(data, clear, label, value) {
+
+  if (!!clear) {
+    d3.selectAll(".chart *").remove();
+  }
+  if (!value) {
+    value = 'value';
+  }
+  if (!label) {
+    label = 'answer';
+  }
+  // debugger
+
+  _data = data
+    .filter(function(d){
+      return d[label] != 'notaword'
+    })
+    .sortBy(value, true)
+    .slice(0,50);
+
+  var color = d3.scale.category20()
+    .domain(_data.slice(0,20).map(function(d){return d[label];}));
+
+  // var sizeScale = d3.scale.linear()
+  //   .range([0, 100])
+  //   .domain([0, d3.max(_data.map(function(d){return d[value];}))]);
+  var sizeScale = d3.scale.log()
+  //   .base(10)
+    .range([2, 100])
+    .domain([d3.min(_data.map(function(d){return d[value];})), d3.max(_data.map(function(d){return d[value];}))]);
+
+  d3.select(".chart")
+    .attr('width', chartConfig.width)
+    .attr('height', chartConfig.height);
+
+  d3.layout.cloud()
+    .size([chartConfig.width -20, chartConfig.height - 30])
+    .words(_data)
+    .spiral('archimedean')
+    .padding(5)
+    .rotate(function() { return Math.round(Math.random() - 0.4) * 90; })
+    .fontSize(function(d) { return sizeScale(d[value]); })
+    .on("end", draw)
+    .start();
+
+    function draw(words) {
+      if (!d3.select(".wordcloud").node()) {
+        console.log('creating wordcloud')
+        d3.select(".chart")
+          .classed("wordcloud", true)
+          .append("g")
+          .classed('text-group', true)
+          .attr("transform", "translate(" + chartConfig.width/2 + "," + chartConfig.height/2 + ")");
+      }
+      var text = d3.select(".text-group")
+        .selectAll(".wordcloud-text")
+        .data(words);
+
+      text
+        .enter()
+        .append("text")
+        .classed("wordcloud-text", true)
+        .style("font-size", (function(d) { return sizeScale(d[value]) + 'px'; }))
+        .style("fill", function(d, i) { return color(i); })
+        .attr("transform", function(d) {
+            return "translate(0,0)rotate(0)";
+        })
+        .text(function(d) { return d.answer; })
+        .transition()
+        .duration(1000)
+        .attr("transform", function(d) {
+          return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+        })
+
+      text
+        .transition()
+        .duration(1000)
+        .style("font-size", (function(d) { return sizeScale(d[value]) + 'px'; }))
+        .attr("transform", function(d) {
+            return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+        });
+
+      text.exit().remove();
+  }
+}
+
+var updateBarChart = function(data, clear, label, value) {
   var reverse = 1;
   if (!value) {
     value = 'value';
@@ -32,6 +118,7 @@ var updateBarChart = function(data, label, value) {
   if (!label) {
     label = 'answer';
   }
+  console.log('Update barchart', data, label, value);
   // console.log(data[0]);
   data.sort(function(a, b) {
     return reverse*(b[value] - a[value]);
@@ -46,6 +133,10 @@ var updateBarChart = function(data, label, value) {
   var xScale = d3.scale.linear()
     .domain([0, d3.max(data, function(d){return d[value];})])
     .range([0, chartConfig.width]);
+
+  if (!!clear) {
+    d3.select(".chart > *").remove();
+  }
 
   var svgSelection = d3
     .select(".chart")
@@ -273,24 +364,31 @@ var updateMultiBarChart = function(data, group, label, value) {
 
   selection.exit().remove();
 }
+function updateChartType(data, type, clear) {
+  if (type == 'leaderboard') {
+    updateBarChart(data, clear);
+  } else {
+    updateWordCloud(data, clear);
+  }
 
-function fillInfoSegment(segment) {
+}
+function fillInfoSegment(segment, section) {
   var info = '';
   if (segment) {
     info = "<div class='info-segment__label'>Catégorie : "+ segment.label +"</div>"
     info += "<div class='info-segment__question'>Question posée : <i>"+ segment.question +"</i></div>"
   }
-  d3.select('.info-segment')
+  d3.select(section + ' .info-segment')
     .html(info)
 }
 
-function fillQuestion(indexQuestion) {
+function fillQuestion(indexQuestion, section) {
   if (indexQuestion == undefined) {
-    d3.select('.question-label')
+    d3.select(section + ' .question-label')
       .html("");
     return;
   }
-  d3.select('.question-label')
+  d3.select(section + ' .question-label')
     .html("Question : " + QUESTIONS[indexQuestion].text);
 }
 
@@ -298,13 +396,22 @@ function filterDataBy(segment, segmentSelector) {
   filtered = currentData.filter(function(d) {
     return d[segmentSelector] == segment
   });
-  updateBarChart(filtered);
+
+  updateChartType(filtered, currentQuestion.type)
+  // updateBarChart(filtered);
 }
 
-function chooseSegment(nestedData, group) {
-  var segments = d3.select('.choose-segment')
+function chooseSegment(data, group) {
+  var uniques = data.unique(function(d){
+    return d[group]
+  }).map(function(d){
+    return d[group]
+  })
+
+  var segments = d3.select(sectionSelector + ' .choose-segment')
     .selectAll('.segment')
-    .data(d3.map(nestedData[0].values, function(d){return d[group];}).keys());
+    .data(uniques)
+    // .data(d3.map(nestedData[0].values, function(d){return d[group];}).keys());
 
   segments.enter()
     .append('div')
@@ -342,35 +449,41 @@ function segmentBy(category) {
       };
       console.log(data);
       currentData = data;
-      nestedData = d3.nest()
-        .key(function(d) { return d['answer']; })
-        .entries(data);
+      // nestedData = d3.nest()
+      //   .key(function(d) { return d['answer']; })
+      //   .entries(data);
+      // console.log('nested', nestedData, category);
 
-      chooseSegment(nestedData, category);
-      fillInfoSegment(SEGMENTS.filter(function(d){return d.id == category})[0]);
-      updateBarChart(totalData);
-
+      chooseSegment(data, category);
+      fillInfoSegment(SEGMENTS.filter(function(d){return d.id == category})[0], sectionSelector);
+      updateChartType(totalData, currentQuestion.type);
+      // updateBarChart(totalData);
       // updateMultiBarChart(data, category);
     });
   // Update
 }
 
 function loadQuestion(indexQuestion) {
+  console.log('Loading quesiton ' + indexQuestion)
   currentDataName = 'question' + indexQuestion;
+  currentQuestion = QUESTIONS[indexQuestion];
+  sectionSelector = ".chart-section.chart-section--" + currentQuestion.type
   // Hide home message
   d3.select('.intro').classed('u-hidden', true);
-  d3.select(".chart-section").classed("u-hidden", false);
+  d3.selectAll(".chart-section").classed("u-hidden", true);
+  d3.select(".chart-section.chart-section--" + currentQuestion.type)
+    .classed("u-hidden", false);
   // update container bounds?
   var bounds = d3.select(".chart-container")
     .node()
     .getBoundingClientRect()
 
   chartConfig.width = bounds.width;
-  chartConfig.height = bounds.height;
+  chartConfig.height = window.innerHeight*0.8;
 
   // Update infos
-  fillInfoSegment();
-  fillQuestion(indexQuestion);
+  fillInfoSegment(undefined, sectionSelector);
+  fillQuestion(indexQuestion, sectionSelector);
   d3.csv(currentDataName + '.csv')
     .row(function(d) { return {answer: d.answer, value: +d.value}; })
     .get(function(error, data) {
@@ -379,12 +492,61 @@ function loadQuestion(indexQuestion) {
       };
       console.log(data);
       totalData = data;
-      updateBarChart(data);
+      updateChartType(data, currentQuestion.type, true)
     });
 }
 
+function getMyGroupData(data, filters) {
+  filteredData = data
+    .filter(function(d){
+      var hasValues = false;
+      var keepValue = true;
+      filters.map(function(v, k) {
+        if (d[k]) {
+          hasValues = true;
+          if (d[k] != v) {
+            keepValue = false;
+          }
+        }
+      })
+      return hasValues && keepValue
+    });
+  // console.log(filteredData);
+  return filteredData;
+}
+
+// function loadQuestionAggregates(qIndex, value) {
+//   if (!value) {
+//     value = 'value';
+//   }
+//   d3.csv('q' + qIndex + '-aggregate.csv')
+//     .row(function(d) {
+//       d[value] = +d[value];
+//       return d;
+//     })
+//     .get(function(error, data) {
+//       if (error) {
+//         console.error(error);
+//       };
+//       console.log(data);
+//       totalData = data;
+//       //
+//       filterSelection = {
+//         'age': '16- 20',
+//         'sexe': 'Une femme',
+//         'tendance': 'Centre'
+//       }
+//       //
+//       _data = getMyGroupData(data, filterSelection);
+//       updateBarChart(_data);
+//     });
+// }
+
 function init(){
-  d3.select(".chart-section").classed("u-hidden", true);
+  Sugar.extend({
+    objectPrototype: true
+  });
+  d3.selectAll(".chart-section").classed("u-hidden", true);
   // Init QUESTIONS
   d3.select(".menu-question-list")
     .selectAll(".menu-question-item")
@@ -397,5 +559,8 @@ function init(){
     })
     .on('click', function(d, i){loadQuestion(i)});
 
+
+  //
+  // loadQuestionAggregates(0);
 }
 init();

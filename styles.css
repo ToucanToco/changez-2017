@@ -73,5 +73,19 @@ body {
 .menu-question-list {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  height: 200px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.go-button {
+  background-color: rgb(100, 226, 97);
+  padding: 5px;
+  color: white;
+}
+
+.wordcloud-text {
+  text-anchor: middle;
 }

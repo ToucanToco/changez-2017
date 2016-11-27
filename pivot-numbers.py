@@ -4,12 +4,32 @@
 import sys
 import os
 import pandas as pd
+from text_unidecode import unidecode
 
 FILENAME = 'change2017_full-extract_clean.csv'
 
 print 'Start'
 print '-------------'
 df = pd.read_csv(FILENAME, sep=',')
+
+# CLean question wordcloud
+import unicodedata
+
+def clean_value(v):
+    # import ipdb; ipdb.set_trace()
+    try:
+        if len(v) > 4:
+            return v.strip().lower()
+        else:
+            return "notaword"
+    except Exception as e:
+        print "can't decode {} -- skipping".format(v)
+        # return v
+        return 'notaword'
+
+wordcloud_col = "Si vous deviez décrire en 1 mot votre président(e) idéal(e) quel serait-il ?"
+df[wordcloud_col] = df[wordcloud_col].apply(clean_value)
+
 demo_cols = [
     'Quel âge avez-vous ?',
     'Quelle est votre profession ?',
@@ -111,10 +131,10 @@ def compute_question_aggregates(q_index):
 #     compute_data_for_question(i)
 
 # Repartition
-df = compute_question_aggregates(0)
-df.to_csv('q0-aggregate.csv')
+# df = compute_question_aggregates(0)
+# df.to_csv('q0-aggregate.csv')
 
-# compute_data_for_question(3)
+compute_data_for_question(11)
 # df_q1 = compute_question_repartition(0)
 # df_q1.to_csv('question0.csv')
 #

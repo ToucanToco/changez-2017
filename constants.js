@@ -21,7 +21,7 @@ var QUESTIONS = [
   {text:"Préférez-vous voter pour : ", type: "leaderboard"},
   {text:"Seriez-vous prêt à voter pour un candidat indépendant?", type: "leaderboard"},
   {text:"Pour vous le plus important pour un candidat à la présidentielle c'est : ", type: "leaderboard"},
-  {text:"Si vous deviez décrire en 1 mot votre président(e) idéal(e) quel serait-il ?", type: "leaderboard"},
+  {text:"Si vous deviez décrire en 1 mot votre président(e) idéal(e) quel serait-il ?", type: "wordcloud"},
   {text:"Pensez-vous que nos présidents successifs ont su utiliser internet pour écouter l'opinion des Français ?", type: "leaderboard"},
   {text:"Dans le futur, pensez-vous que le/la président-e et son gouvernement devraient  : [Intégrer internet pour déterminer leur ligne politique]", type: "leaderboard"},
   {text:"Dans le futur, pensez-vous que le/la président-e et son gouvernement devraient  : [Prendre en compte les pétitions en ligne dans le processus démocratique]", type: "leaderboard"},

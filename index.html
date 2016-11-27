@@ -14,20 +14,30 @@
     <nav>
       <div>Accueil</div>
       <ul class="menu-question-list">
-        <!-- <li data-question="0" onclick="loadQuestion(0)">La cause qui vous tient le plus à coeur</li>
-        <li data-question="1" onclick="loadQuestion(1)">La cause trop traitée dans les médias</li>
-        <li data-question="2" onclick="loadQuestion(2)">La cause trop traitée par les politiques</li>
-        <li data-question="2" onclick="loadQuestion(3)">La cause trop traitée par les politiques</li>
-        <li data-question="2" onclick="loadQuestion(4)">La cause trop traitée par les politiques</li> -->
       </ul>
     </nav>
+
     <div class="intro">
       Amusez-vous à explorer les réponses des utilisateurs de Change.org.
       <br>
       Ce service vous est fourni avec des bisous.
-      <div class="go-button" onclick="loadQuestion(0)">On commence ?</div>
+      <div class="go-button" onclick="loadQuestion(11)">On commence ?</div>
     </div>
-    <div class="chart-section">
+
+    <div class="chart-section chart-section--leaderboard">
+      <h2 class="question-label">Question: Quelles est la cause qui vous tient le plus à coeur ?</h2>
+      <div class="segment-container">
+        <div class="segment-controls">
+          <button onclick="segmentBy('age')">Par âge</button>
+          <button onclick="segmentBy('sexe')">Par sexe</button>
+          <button onclick="segmentBy('tendance')">Par tendance politique</button>
+        </div>
+        <div class="info-segment"></div>
+        <div class="choose-segment"></div>
+      </div>
+    </div>
+
+    <div class="chart-section chart-section--wordcloud">
       <h2 class="question-label">Question: Quelles est la cause qui vous tient le plus à coeur ?</h2>
       <div class="segment-container">
         <div class="segment-controls">
@@ -39,9 +49,10 @@
         <div class="choose-segment"></div>
       </div>
 
-      <div class="chart-container">
-        <svg class="chart"></svg>
-      </div>
+    </div>
+
+    <div class="chart-container">
+      <svg class="chart"></svg>
     </div>
 
 
@@ -49,6 +60,7 @@
 
   <script src="sugar.min.js"></script>
   <script src="d3-3.5.17.js"></script>
+  <script src="d3.layout.cloud.js"></script>
   <script src="constants.js"></script>
   <script src="script.js"></script>
 
