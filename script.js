@@ -628,9 +628,17 @@ function previous() {
   }
   loadQuestion(newIndex);
 }
-function toggleMenu() {
-  var isOpen = d3.select('.nav-menu')
+function toggleMenu(mustOpen) {
+  console.log(mustOpen);
+  if (mustOpen == undefined) {
+    mustOpen = !d3.select('.nav-menu')
     .classed('nav-menu--open');
+  }
+
   d3.select('.nav-menu')
-    .classed('nav-menu--open', !isOpen);
+    .classed('nav-menu--open', mustOpen);
+  d3.select('.menu-overlay')
+    .classed('menu-overlay--open', mustOpen);
+
+  this.event.preventDefault();
 }
