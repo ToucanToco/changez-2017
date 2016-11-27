@@ -20,88 +20,114 @@ demo_cols = [
     'À quelle tendance politique vous identifiez-vous?',
 ]
 
-# question_columns = [col for col in df.columns if col != 'Timestamp' and col not in demo_cols]
+question_columns_without_segments = [col for col in df.columns if col != 'Timestamp' and col not in demo_cols]
 question_columns = [col for col in df.columns if col != 'Timestamp']
 
 
 df['count'] = 1
 df = df.set_index('Timestamp')
 
-### QUESTION 1
-df_q1 = df[[question_columns[0], 'count']]
-# import ipdb; ipdb.set_trace()
 
-agg_df = df_q1.groupby(question_columns[0]).count().reset_index()
-total = agg_df['count'].sum()
+def compute_question_count_by_seg(q_index, segmentation_col=None, rename_segment=None):
+    if not segmentation_col:
+        segmentation_col = demo_cols[0]
+    if not rename_segment:
+        rename_segment = segmentation_col
 
-agg_df['count'] = 100 * agg_df['count']/total
-agg_df.columns = ['answer', 'value']
-agg_df.to_csv('question1.csv')
+    columns_to_keep = [question_columns[q_index], 'count', segmentation_col]
+    df_q = df[columns_to_keep]
+
+
+    agg_df = df_q.groupby([segmentation_col, question_columns[q_index]]).count().reset_index()
+
+
+    segment_totals = df_q.groupby(segmentation_col).sum().reset_index()
+    segment_totals = segment_totals.rename(columns={'count': 'total'})
+
+    agg_df = agg_df.merge(segment_totals, on=[segmentation_col])
+    agg_df['value'] = agg_df['count'] / agg_df['total']
+    agg_df = agg_df.rename(columns={
+        question_columns[q_index]: 'answer',
+        segmentation_col: rename_segment
+    })
+    return agg_df
+
+def compute_question_repartition(q_index):
+    """
+    Compute the repartition of the answers for a given question
+    """
+    df_q = df[[question_columns[q_index], 'count']]
+
+    agg_df = df_q.groupby(question_columns[q_index]).count().reset_index()
+    total = agg_df['count'].sum()
+
+    agg_df['count'] = agg_df['count']/total
+    agg_df.columns = ['answer', 'value']
+    return agg_df
+
+
+def compute_data_for_question(q_index):
+    df_q1 = compute_question_repartition(q_index)
+    df_q1.to_csv('question{}.csv'.format(q_index))
+
+    print '-- compute by age'
+    df_q1_seg = compute_question_count_by_seg(q_index, 'Quel âge avez-vous ?', 'age')
+    df_q1_seg.to_csv('question{}-age.csv'.format(q_index))
+
+    print '-- compute by sexe'
+    df_q1_seg = compute_question_count_by_seg(q_index, 'Vous êtes :', 'sexe')
+    df_q1_seg.to_csv('question{}-sexe.csv'.format(q_index))
+
+    print '-- compute by tendance'
+    df_q1_seg = compute_question_count_by_seg(q_index, 'À quelle tendance politique vous identifiez-vous?', 'tendance')
+    df_q1_seg.to_csv('question{}-tendance.csv'.format(q_index))
+
+def compute_question_aggregates(q_index):
+    """
+    Compute the repartition by segment categories for a given question
+    """
+    columns_to_keep = demo_cols + [question_columns[q_index]]
+    df_q = df[columns_to_keep + ['count']]
+
+    agg_df = df_q.groupby(columns_to_keep).sum().reset_index()
+    agg_df = agg_df.rename(columns={
+            'Quel âge avez-vous ?': 'age',
+            'Quelle est votre profession ?': 'profession',
+            'Vous êtes :': 'sexe',
+            'Quelle est votre tranche de revenu annuel ?': 'revenu',
+            'Dans quel département habitez vous ?': 'departement',
+            'Quelle est la taille de votre commune ?': 'taille_commune',
+            'À quelle tendance politique vous identifiez-vous?': 'tendance',
+            question_columns[q_index]: 'answer',
+            'count': 'value'
+        })
+    return agg_df
+
+### ALL QUESTIONS
+# print 'length {}'.format(len(question_columns_without_segments))
+# 18 QUESTIONS
+# for i in range(15, 18):
+#     print 'Compute data for question {}'.format(i)
+#     compute_data_for_question(i)
+
+# Repartition
+df = compute_question_aggregates(0)
+df.to_csv('q0-aggregate.csv')
+
+# compute_data_for_question(3)
+# df_q1 = compute_question_repartition(0)
+# df_q1.to_csv('question0.csv')
+#
+# df_q1_seg = compute_question_count_by_seg(0, 'Quel âge avez-vous ?', 'age')
+# df_q1_seg.to_csv('question0-age.csv')
+#
+# df_q1_seg = compute_question_count_by_seg(0, 'Vous êtes :', 'sexe')
+# df_q1_seg.to_csv('question0-sexe.csv')
+#
+# df_q1_seg = compute_question_count_by_seg(0, 'À quelle tendance politique vous identifiez-vous?', 'tendance')
+# df_q1_seg.to_csv('question0-tendance.csv')
 
 # pd.melt(df, id_vars=['Timestamp'], value_vars=question_columns)
 # pd.pivot_table(df, values='D', index=['A', 'B'], columns=['C'], aggfunc=np.sum)
 print '-------------'
 print 'End'
-#
-# # DEFAULT SCRIPT ARG
-# ## Arguments can be changed here or by overriding when running the script:
-# ## `python email-comp.py --arg_name=newname`
-# arguments = {
-#     'new_separator': u',',
-#     'old_separator': u',',
-#     'new_email': u'email address',
-#     'old_email': u'Person - Email',
-#     'fileold': u'Base de données pipedrive.csv',
-#     'filenew': u'Etudes Market 2 Emilie.csv',
-# }
-# # PARSE ARGUMENTS
-# print 'Arguments:'
-# for arg in sys.argv:
-#     print arg
-#     if '--' in arg:
-#         params = arg.strip(u'--').split(u'=')
-#         if len(params) == 2:
-#             arguments[params[0]] = params[1]
-# if not ('fileold' in arguments) or not ('filenew' in arguments):
-#     print 'Missing parameter fileold and/or filenew'
-# print arguments
-# # OPEN FILES
-# print '-------------\nRead csv files'
-# new_df = pd.read_csv(arguments['filenew'], sep=arguments['new_separator'])
-# old_df = pd.read_csv(arguments['fileold'], sep=arguments['old_separator'])
-# # DROP DUPLICATES
-# ## Separate multiple emails
-# # s = pd.DataFrame(list(old_df[arguments['old_email']].str.split(',')))
-# s = old_df[arguments['old_email']].str.split(',')
-# # s = old_df[arguments['old_email']].split(',').apply(Series, 1).stack()
-# import ipdb; ipdb.set_trace()
-# s.index = s.index.droplevel(-1)
-# s.name = arguments['old_email']
-# del old_df[arguments['old_email']]
-# old_df = old_df.join(s)
-#
-# new_df = new_df.drop_duplicates(subset=[arguments['new_email']])
-# old_df = old_df.drop_duplicates(subset=[arguments['old_email']])
-#
-# print 'New DF:'
-# print new_df.head()
-# print 'Old DF:'
-# print old_df.head()
-# import ipdb;ipdb.set_trace()
-#
-# # COMPARE
-# print '-------------\nComparing'
-#
-# new_df = new_df.set_index([arguments['new_email']])
-# old_df = old_df.set_index([arguments['old_email']])
-# new_index = new_df.index.difference(old_df.index)
-# new_user_list_df = new_df.ix[new_index]
-# intersect_user_list_df = new_df.merge(old_df, how='inner', right_index=True, left_index=True)
-# # print new_user_list_df.head()
-# print 'Diff user list shape :'
-# print new_user_list_df.shape
-# # print intersect_user_list_df.head()
-# print 'Common user list shape :'
-# print intersect_user_list_df.shape
-# print intersect_user_list_df.index
-# print '-------------\nOutput'
