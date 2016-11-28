@@ -1,0 +1,201 @@
+,tendance,answer,count,total,value
+0,Autre tendance,La défense des droits humains,458,6503,0.0704290327541
+1,Autre tendance,La justice sociale,700,6503,0.10764262648
+2,Autre tendance,La liberté de la presse et d’expression,149,6503,0.0229125019222
+3,Autre tendance,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",104,6503,0.0159926187913
+4,Autre tendance,La politique étrangère,96,6503,0.0147624173458
+5,Autre tendance,La protection de l'environnement,948,6503,0.14577887129
+6,Autre tendance,La religion,34,6503,0.00522835614332
+7,Autre tendance,La santé,170,6503,0.0261417807166
+8,Autre tendance,"La sécurité, le terrorisme",108,6503,0.0166077195141
+9,Autre tendance,La transparence en politique,764,6503,0.117484238044
+10,Autre tendance,Le handicap,119,6503,0.0182992465016
+11,Autre tendance,Le logement,88,6503,0.0135322159004
+12,Autre tendance,Le vivre ensemble,552,6503,0.0848838997386
+13,Autre tendance,Les droits des animaux,546,6503,0.0839612486545
+14,Autre tendance,Les droits des femmes,179,6503,0.0275257573428
+15,Autre tendance,Les droits des personnes LGBT,52,6503,0.00799630939566
+16,Autre tendance,L’accueil des migrants,48,6503,0.00738120867292
+17,Autre tendance,L’emploi,401,6503,0.061663847455
+18,Autre tendance,L’économie,311,6503,0.0478240811933
+19,Autre tendance,L’éducation,676,6503,0.103952022144
+20,Centre,La défense des droits humains,91,1886,0.0482502651113
+21,Centre,La justice sociale,183,1886,0.0970307529162
+22,Centre,La liberté de la presse et d’expression,22,1886,0.0116648992577
+23,Centre,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",46,1886,0.0243902439024
+24,Centre,La politique étrangère,31,1886,0.0164369034995
+25,Centre,La protection de l'environnement,267,1886,0.141569459173
+26,Centre,La religion,9,1886,0.00477200424178
+27,Centre,La santé,48,1886,0.0254506892895
+28,Centre,"La sécurité, le terrorisme",17,1886,0.00901378579003
+29,Centre,La transparence en politique,220,1886,0.116648992577
+30,Centre,Le handicap,41,1886,0.0217391304348
+31,Centre,Le logement,39,1886,0.0206786850477
+32,Centre,Le vivre ensemble,141,1886,0.0747613997879
+33,Centre,Les droits des animaux,95,1886,0.0503711558855
+34,Centre,Les droits des femmes,58,1886,0.0307529162248
+35,Centre,Les droits des personnes LGBT,13,1886,0.00689289501591
+36,Centre,L’accueil des migrants,17,1886,0.00901378579003
+37,Centre,L’emploi,135,1886,0.0715800636267
+38,Centre,L’économie,148,1886,0.0784729586426
+39,Centre,L’éducation,265,1886,0.140509013786
+40,Centre-droite,La défense des droits humains,80,2433,0.032881216605
+41,Centre-droite,La justice sociale,175,2433,0.0719276613235
+42,Centre-droite,La liberté de la presse et d’expression,29,2433,0.0119194410193
+43,Centre-droite,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",27,2433,0.0110974106042
+44,Centre-droite,La politique étrangère,74,2433,0.0304151253596
+45,Centre-droite,La protection de l'environnement,316,2433,0.12988080559
+46,Centre-droite,La religion,13,2433,0.00534319769831
+47,Centre-droite,La santé,76,2433,0.0312371557748
+48,Centre-droite,"La sécurité, le terrorisme",65,2433,0.0267159884916
+49,Centre-droite,La transparence en politique,273,2433,0.112207151665
+50,Centre-droite,Le handicap,59,2433,0.0242498972462
+51,Centre-droite,Le logement,38,2433,0.0156185778874
+52,Centre-droite,Le vivre ensemble,136,2433,0.0558980682285
+53,Centre-droite,Les droits des animaux,137,2433,0.0563090834361
+54,Centre-droite,Les droits des femmes,73,2433,0.0300041101521
+55,Centre-droite,Les droits des personnes LGBT,16,2433,0.006576243321
+56,Centre-droite,L’accueil des migrants,14,2433,0.00575421290588
+57,Centre-droite,L’emploi,165,2433,0.0678175092478
+58,Centre-droite,L’économie,283,2433,0.11631730374
+59,Centre-droite,L’éducation,384,2433,0.157829839704
+60,Centre-gauche,La défense des droits humains,175,2869,0.0609968630185
+61,Centre-gauche,La justice sociale,314,2869,0.10944579993
+62,Centre-gauche,La liberté de la presse et d’expression,39,2869,0.0135935866155
+63,Centre-gauche,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",101,2869,0.0352039037992
+64,Centre-gauche,La politique étrangère,57,2869,0.0198675496689
+65,Centre-gauche,La protection de l'environnement,418,2869,0.145695364238
+66,Centre-gauche,La religion,6,2869,0.00209132101778
+67,Centre-gauche,La santé,67,2869,0.0233530846985
+68,Centre-gauche,"La sécurité, le terrorisme",21,2869,0.00731962356222
+69,Centre-gauche,La transparence en politique,288,2869,0.100383408853
+70,Centre-gauche,Le handicap,75,2869,0.0261415127222
+71,Centre-gauche,Le logement,53,2869,0.018473335657
+72,Centre-gauche,Le vivre ensemble,268,2869,0.093412338794
+73,Centre-gauche,Les droits des animaux,102,2869,0.0355524573022
+74,Centre-gauche,Les droits des femmes,77,2869,0.0268386197281
+75,Centre-gauche,Les droits des personnes LGBT,28,2869,0.00975949808296
+76,Centre-gauche,L’accueil des migrants,48,2869,0.0167305681422
+77,Centre-gauche,L’emploi,163,2869,0.0568142209829
+78,Centre-gauche,L’économie,154,2869,0.0536772394563
+79,Centre-gauche,L’éducation,415,2869,0.14464970373
+80,Droite,La défense des droits humains,120,3846,0.0312012480499
+81,Droite,La justice sociale,248,3846,0.0644825793032
+82,Droite,La liberté de la presse et d’expression,68,3846,0.0176807072283
+83,Droite,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",33,3846,0.00858034321373
+84,Droite,La politique étrangère,130,3846,0.0338013520541
+85,Droite,La protection de l'environnement,248,3846,0.0644825793032
+86,Droite,La religion,48,3846,0.01248049922
+87,Droite,La santé,125,3846,0.032501300052
+88,Droite,"La sécurité, le terrorisme",283,3846,0.0735829433177
+89,Droite,La transparence en politique,383,3846,0.0995839833593
+90,Droite,Le handicap,105,3846,0.0273010920437
+91,Droite,Le logement,62,3846,0.0161206448258
+92,Droite,Le vivre ensemble,103,3846,0.0267810712428
+93,Droite,Les droits des animaux,373,3846,0.0969838793552
+94,Droite,Les droits des femmes,103,3846,0.0267810712428
+95,Droite,Les droits des personnes LGBT,20,3846,0.00520020800832
+96,Droite,L’accueil des migrants,38,3846,0.00988039521581
+97,Droite,L’emploi,403,3846,0.104784191368
+98,Droite,L’économie,444,3846,0.115444617785
+99,Droite,L’éducation,509,3846,0.132345293812
+100,Extrême droite,La défense des droits humains,62,1914,0.0323928944619
+101,Extrême droite,La justice sociale,136,1914,0.0710553814002
+102,Extrême droite,La liberté de la presse et d’expression,37,1914,0.0193312434692
+103,Extrême droite,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",8,1914,0.00417972831766
+104,Extrême droite,La politique étrangère,33,1914,0.0172413793103
+105,Extrême droite,La protection de l'environnement,95,1914,0.0496342737722
+106,Extrême droite,La religion,28,1914,0.0146290491118
+107,Extrême droite,La santé,57,1914,0.0297805642633
+108,Extrême droite,"La sécurité, le terrorisme",262,1914,0.136886102403
+109,Extrême droite,La transparence en politique,179,1914,0.0935214211076
+110,Extrême droite,Le handicap,52,1914,0.0271682340648
+111,Extrême droite,Le logement,27,1914,0.0141065830721
+112,Extrême droite,Le vivre ensemble,32,1914,0.0167189132706
+113,Extrême droite,Les droits des animaux,252,1914,0.131661442006
+114,Extrême droite,Les droits des femmes,43,1914,0.0224660397074
+115,Extrême droite,Les droits des personnes LGBT,17,1914,0.00888192267503
+116,Extrême droite,L’accueil des migrants,44,1914,0.0229885057471
+117,Extrême droite,L’emploi,239,1914,0.12486938349
+118,Extrême droite,L’économie,153,1914,0.0799373040752
+119,Extrême droite,L’éducation,158,1914,0.0825496342738
+120,Extrême gauche,La défense des droits humains,308,3035,0.101482701812
+121,Extrême gauche,La justice sociale,619,3035,0.203953871499
+122,Extrême gauche,La liberté de la presse et d’expression,73,3035,0.0240527182867
+123,Extrême gauche,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",141,3035,0.0464579901153
+124,Extrême gauche,La politique étrangère,22,3035,0.00724876441516
+125,Extrême gauche,La protection de l'environnement,452,3035,0.148929159802
+126,Extrême gauche,La religion,6,3035,0.00197693574959
+127,Extrême gauche,La santé,56,3035,0.0184514003295
+128,Extrême gauche,"La sécurité, le terrorisme",7,3035,0.00230642504119
+129,Extrême gauche,La transparence en politique,221,3035,0.0728171334432
+130,Extrême gauche,Le handicap,44,3035,0.0144975288303
+131,Extrême gauche,Le logement,44,3035,0.0144975288303
+132,Extrême gauche,Le vivre ensemble,215,3035,0.0708401976936
+133,Extrême gauche,Les droits des animaux,117,3035,0.038550247117
+134,Extrême gauche,Les droits des femmes,112,3035,0.036902800659
+135,Extrême gauche,Les droits des personnes LGBT,40,3035,0.0131795716639
+136,Extrême gauche,L’accueil des migrants,45,3035,0.0148270181219
+137,Extrême gauche,L’emploi,135,3035,0.0444810543657
+138,Extrême gauche,L’économie,64,3035,0.0210873146623
+139,Extrême gauche,L’éducation,314,3035,0.103459637562
+140,Gauche,La défense des droits humains,676,8254,0.0818996850012
+141,Gauche,La justice sociale,1424,8254,0.172522413375
+142,Gauche,La liberté de la presse et d’expression,117,8254,0.014174945481
+143,Gauche,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",370,8254,0.0448267506663
+144,Gauche,La politique étrangère,80,8254,0.00969227041434
+145,Gauche,La protection de l'environnement,1085,8254,0.131451417495
+146,Gauche,La religion,19,8254,0.00230191422341
+147,Gauche,La santé,176,8254,0.0213229949116
+148,Gauche,"La sécurité, le terrorisme",53,8254,0.0064211291495
+149,Gauche,La transparence en politique,609,8254,0.0737824085292
+150,Gauche,Le handicap,188,8254,0.0227768354737
+151,Gauche,Le logement,120,8254,0.0145384056215
+152,Gauche,Le vivre ensemble,712,8254,0.0862612066877
+153,Gauche,Les droits des animaux,348,8254,0.0421613763024
+154,Gauche,Les droits des femmes,324,8254,0.0392536951781
+155,Gauche,Les droits des personnes LGBT,80,8254,0.00969227041434
+156,Gauche,L’accueil des migrants,119,8254,0.0144172522413
+157,Gauche,L’emploi,463,8254,0.056094015023
+158,Gauche,L’économie,252,8254,0.0305306518052
+159,Gauche,L’éducation,1039,8254,0.125878362006
+160,Je préfère ne pas répondre,La défense des droits humains,408,6494,0.0628272251309
+161,Je préfère ne pas répondre,La justice sociale,698,6494,0.107483831229
+162,Je préfère ne pas répondre,La liberté de la presse et d’expression,102,6494,0.0157068062827
+163,Je préfère ne pas répondre,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",153,6494,0.0235602094241
+164,Je préfère ne pas répondre,La politique étrangère,93,6494,0.0143209116107
+165,Je préfère ne pas répondre,La protection de l'environnement,827,6494,0.127348321528
+166,Je préfère ne pas répondre,La religion,28,6494,0.0043116723129
+167,Je préfère ne pas répondre,La santé,191,6494,0.0294117647059
+168,Je préfère ne pas répondre,"La sécurité, le terrorisme",213,6494,0.0327995072374
+169,Je préfère ne pas répondre,La transparence en politique,611,6494,0.0940868493994
+170,Je préfère ne pas répondre,Le handicap,183,6494,0.0281798583308
+171,Je préfère ne pas répondre,Le logement,103,6494,0.0158607945796
+172,Je préfère ne pas répondre,Le vivre ensemble,370,6494,0.0569756698491
+173,Je préfère ne pas répondre,Les droits des animaux,633,6494,0.097474591931
+174,Je préfère ne pas répondre,Les droits des femmes,248,6494,0.0381890976286
+175,Je préfère ne pas répondre,Les droits des personnes LGBT,59,6494,0.00908530951648
+176,Je préfère ne pas répondre,L’accueil des migrants,72,6494,0.011087157376
+177,Je préfère ne pas répondre,L’emploi,554,6494,0.0853095164767
+178,Je préfère ne pas répondre,L’économie,291,6494,0.0448105943948
+179,Je préfère ne pas répondre,L’éducation,657,6494,0.101170311056
+180,Écologiste,La défense des droits humains,304,5725,0.0531004366812
+181,Écologiste,La justice sociale,415,5725,0.0724890829694
+182,Écologiste,La liberté de la presse et d’expression,66,5725,0.0115283842795
+183,Écologiste,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",137,5725,0.0239301310044
+184,Écologiste,La politique étrangère,35,5725,0.0061135371179
+185,Écologiste,La protection de l'environnement,2047,5725,0.357554585153
+186,Écologiste,La religion,11,5725,0.00192139737991
+187,Écologiste,La santé,99,5725,0.0172925764192
+188,Écologiste,"La sécurité, le terrorisme",14,5725,0.00244541484716
+189,Écologiste,La transparence en politique,344,5725,0.0600873362445
+190,Écologiste,Le handicap,74,5725,0.0129257641921
+191,Écologiste,Le logement,51,5725,0.00890829694323
+192,Écologiste,Le vivre ensemble,453,5725,0.0791266375546
+193,Écologiste,Les droits des animaux,678,5725,0.118427947598
+194,Écologiste,Les droits des femmes,164,5725,0.0286462882096
+195,Écologiste,Les droits des personnes LGBT,52,5725,0.00908296943231
+196,Écologiste,L’accueil des migrants,73,5725,0.0127510917031
+197,Écologiste,L’emploi,102,5725,0.0178165938865
+198,Écologiste,L’économie,69,5725,0.0120524017467
+199,Écologiste,L’éducation,537,5725,0.0937991266376

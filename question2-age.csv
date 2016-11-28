@@ -1,0 +1,299 @@
+,age,answer,count,total,value
+0,16- 20,La défense des droits humains,16,3031,0.00527878587925
+1,16- 20,La justice sociale,46,3031,0.0151765094028
+2,16- 20,La liberté de la presse et d’expression,52,3031,0.0171560541076
+3,16- 20,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",96,3031,0.0316727152755
+4,16- 20,La politique étrangère,269,3031,0.0887495875949
+5,16- 20,La protection de l'environnement,41,3031,0.0135268888156
+6,16- 20,La religion,553,3031,0.182448036952
+7,16- 20,La santé,13,3031,0.00428901352689
+8,16- 20,"La sécurité, le terrorisme",479,3031,0.15803365226
+9,16- 20,La transparence en politique,168,3031,0.0554272517321
+10,16- 20,Le handicap,20,3031,0.00659848234906
+11,16- 20,Le logement,54,3031,0.0178159023425
+12,16- 20,Le vivre ensemble,102,3031,0.0336522599802
+13,16- 20,Les droits des animaux,50,3031,0.0164962058726
+14,16- 20,Les droits des femmes,17,3031,0.0056087099967
+15,16- 20,Les droits des personnes LGBT,87,3031,0.0287033982184
+16,16- 20,L’accueil des migrants,355,3031,0.117123061696
+17,16- 20,L’emploi,100,3031,0.0329924117453
+18,16- 20,L’économie,431,3031,0.142197294622
+19,16- 20,L’éducation,82,3031,0.0270537776311
+20,21-25,La défense des droits humains,16,3102,0.00515796260477
+21,21-25,La justice sociale,29,3102,0.00934880722115
+22,21-25,La liberté de la presse et d’expression,27,3102,0.00870406189555
+23,21-25,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",127,3102,0.0409413281754
+24,21-25,La politique étrangère,232,3102,0.0747904577692
+25,21-25,La protection de l'environnement,28,3102,0.00902643455835
+26,21-25,La religion,615,3102,0.198259187621
+27,21-25,La santé,11,3102,0.00354609929078
+28,21-25,"La sécurité, le terrorisme",692,3102,0.223081882656
+29,21-25,La transparence en politique,131,3102,0.0422308188266
+30,21-25,Le handicap,10,3102,0.00322372662798
+31,21-25,Le logement,13,3102,0.00419084461638
+32,21-25,Le vivre ensemble,72,3102,0.0232108317215
+33,21-25,Les droits des animaux,33,3102,0.0106382978723
+34,21-25,Les droits des femmes,18,3102,0.00580270793037
+35,21-25,Les droits des personnes LGBT,76,3102,0.0245003223727
+36,21-25,L’accueil des migrants,395,3102,0.127337201805
+37,21-25,L’emploi,129,3102,0.041586073501
+38,21-25,L’économie,420,3102,0.135396518375
+39,21-25,L’éducation,28,3102,0.00902643455835
+40,26-30,La défense des droits humains,9,2730,0.0032967032967
+41,26-30,La justice sociale,32,2730,0.0117216117216
+42,26-30,La liberté de la presse et d’expression,24,2730,0.00879120879121
+43,26-30,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",136,2730,0.0498168498168
+44,26-30,La politique étrangère,176,2730,0.0644688644689
+45,26-30,La protection de l'environnement,16,2730,0.00586080586081
+46,26-30,La religion,502,2730,0.183882783883
+47,26-30,La santé,7,2730,0.0025641025641
+48,26-30,"La sécurité, le terrorisme",698,2730,0.255677655678
+49,26-30,La transparence en politique,89,2730,0.0326007326007
+50,26-30,Le handicap,10,2730,0.003663003663
+51,26-30,Le logement,21,2730,0.00769230769231
+52,26-30,Le vivre ensemble,78,2730,0.0285714285714
+53,26-30,Les droits des animaux,34,2730,0.0124542124542
+54,26-30,Les droits des femmes,15,2730,0.00549450549451
+55,26-30,Les droits des personnes LGBT,56,2730,0.0205128205128
+56,26-30,L’accueil des migrants,380,2730,0.139194139194
+57,26-30,L’emploi,90,2730,0.032967032967
+58,26-30,L’économie,329,2730,0.120512820513
+59,26-30,L’éducation,28,2730,0.0102564102564
+60,31-35,La défense des droits humains,23,2999,0.00766922307436
+61,31-35,La justice sociale,44,2999,0.0146715571857
+62,31-35,La liberté de la presse et d’expression,23,2999,0.00766922307436
+63,31-35,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",156,2999,0.052017339113
+64,31-35,La politique étrangère,180,2999,0.0600200066689
+65,31-35,La protection de l'environnement,18,2999,0.00600200066689
+66,31-35,La religion,547,2999,0.182394131377
+67,31-35,La santé,4,2999,0.00133377792598
+68,31-35,"La sécurité, le terrorisme",701,2999,0.233744581527
+69,31-35,La transparence en politique,118,2999,0.0393464488163
+70,31-35,Le handicap,8,2999,0.00266755585195
+71,31-35,Le logement,22,2999,0.00733577859286
+72,31-35,Le vivre ensemble,94,2999,0.0313437812604
+73,31-35,Les droits des animaux,41,2999,0.0136712237412
+74,31-35,Les droits des femmes,13,2999,0.00433477825942
+75,31-35,Les droits des personnes LGBT,67,2999,0.0223407802601
+76,31-35,L’accueil des migrants,436,2999,0.145381793931
+77,31-35,L’emploi,90,2999,0.0300100033344
+78,31-35,L’économie,394,2999,0.131377125709
+79,31-35,L’éducation,20,2999,0.00666888962988
+80,36-40,La défense des droits humains,30,3123,0.00960614793468
+81,36-40,La justice sociale,46,3123,0.0147294268332
+82,36-40,La liberté de la presse et d’expression,33,3123,0.0105667627281
+83,36-40,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",182,3123,0.0582772974704
+84,36-40,La politique étrangère,242,3123,0.0774895933397
+85,36-40,La protection de l'environnement,28,3123,0.00896573807237
+86,36-40,La religion,525,3123,0.168107588857
+87,36-40,La santé,5,3123,0.00160102465578
+88,36-40,"La sécurité, le terrorisme",688,3123,0.220300992635
+89,36-40,La transparence en politique,139,3123,0.0445084854307
+90,36-40,Le handicap,9,3123,0.0028818443804
+91,36-40,Le logement,21,3123,0.00672430355427
+92,36-40,Le vivre ensemble,93,3123,0.0297790585975
+93,36-40,Les droits des animaux,51,3123,0.016330451489
+94,36-40,Les droits des femmes,23,3123,0.00736471341659
+95,36-40,Les droits des personnes LGBT,88,3123,0.0281780339417
+96,36-40,L’accueil des migrants,450,3123,0.14409221902
+97,36-40,L’emploi,90,3123,0.028818443804
+98,36-40,L’économie,357,3123,0.114313160423
+99,36-40,L’éducation,23,3123,0.00736471341659
+100,41-45,La défense des droits humains,28,3402,0.0082304526749
+101,41-45,La justice sociale,62,3402,0.0182245737801
+102,41-45,La liberté de la presse et d’expression,32,3402,0.00940623162845
+103,41-45,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",261,3402,0.0767195767196
+104,41-45,La politique étrangère,253,3402,0.0743680188125
+105,41-45,La protection de l'environnement,34,3402,0.00999412110523
+106,41-45,La religion,530,3402,0.155790711346
+107,41-45,La santé,7,3402,0.00205761316872
+108,41-45,"La sécurité, le terrorisme",612,3402,0.179894179894
+109,41-45,La transparence en politique,193,3402,0.0567313345091
+110,41-45,Le handicap,20,3402,0.00587889476778
+111,41-45,Le logement,38,3402,0.0111699000588
+112,41-45,Le vivre ensemble,131,3402,0.038506760729
+113,41-45,Les droits des animaux,63,3402,0.0185185185185
+114,41-45,Les droits des femmes,22,3402,0.00646678424456
+115,41-45,Les droits des personnes LGBT,125,3402,0.0367430922986
+116,41-45,L’accueil des migrants,527,3402,0.154908877131
+117,41-45,L’emploi,65,3402,0.0191064079953
+118,41-45,L’économie,363,3402,0.106701940035
+119,41-45,L’éducation,36,3402,0.010582010582
+120,46-50,La défense des droits humains,43,3679,0.0116879586844
+121,46-50,La justice sociale,52,3679,0.0141342756184
+122,46-50,La liberté de la presse et d’expression,44,3679,0.0119597716771
+123,46-50,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",303,3679,0.0823593367763
+124,46-50,La politique étrangère,291,3679,0.0790975808644
+125,46-50,La protection de l'environnement,47,3679,0.0127752106551
+126,46-50,La religion,552,3679,0.150040771949
+127,46-50,La santé,11,3679,0.00298994291927
+128,46-50,"La sécurité, le terrorisme",628,3679,0.170698559391
+129,46-50,La transparence en politique,240,3679,0.0652351182387
+130,46-50,Le handicap,26,3679,0.00706713780919
+131,46-50,Le logement,19,3679,0.00516444686056
+132,46-50,Le vivre ensemble,172,3679,0.0467518347377
+133,46-50,Les droits des animaux,69,3679,0.0187550964936
+134,46-50,Les droits des femmes,27,3679,0.00733895080185
+135,46-50,Les droits des personnes LGBT,136,3679,0.0369665670019
+136,46-50,L’accueil des migrants,547,3679,0.148681706986
+137,46-50,L’emploi,88,3679,0.0239195433542
+138,46-50,L’économie,351,3679,0.095406360424
+139,46-50,L’éducation,33,3679,0.00896982875781
+140,51-55,La défense des droits humains,51,4545,0.0112211221122
+141,51-55,La justice sociale,81,4545,0.0178217821782
+142,51-55,La liberté de la presse et d’expression,63,4545,0.0138613861386
+143,51-55,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",398,4545,0.0875687568757
+144,51-55,La politique étrangère,347,4545,0.0763476347635
+145,51-55,La protection de l'environnement,58,4545,0.0127612761276
+146,51-55,La religion,632,4545,0.139053905391
+147,51-55,La santé,12,4545,0.0026402640264
+148,51-55,"La sécurité, le terrorisme",739,4545,0.162596259626
+149,51-55,La transparence en politique,339,4545,0.0745874587459
+150,51-55,Le handicap,25,4545,0.00550055005501
+151,51-55,Le logement,26,4545,0.00572057205721
+152,51-55,Le vivre ensemble,182,4545,0.0400440044004
+153,51-55,Les droits des animaux,94,4545,0.0206820682068
+154,51-55,Les droits des femmes,39,4545,0.00858085808581
+155,51-55,Les droits des personnes LGBT,140,4545,0.030803080308
+156,51-55,L’accueil des migrants,760,4545,0.167216721672
+157,51-55,L’emploi,103,4545,0.0226622662266
+158,51-55,L’économie,410,4545,0.0902090209021
+159,51-55,L’éducation,46,4545,0.0101210121012
+160,56-60,La défense des droits humains,52,4806,0.0108198085726
+161,56-60,La justice sociale,66,4806,0.0137328339576
+162,56-60,La liberté de la presse et d’expression,62,4806,0.0129005409904
+163,56-60,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",432,4806,0.0898876404494
+164,56-60,La politique étrangère,337,4806,0.0701206824802
+165,56-60,La protection de l'environnement,49,4806,0.0101955888473
+166,56-60,La religion,750,4806,0.156054931336
+167,56-60,La santé,14,4806,0.00291302538494
+168,56-60,"La sécurité, le terrorisme",771,4806,0.160424469413
+169,56-60,La transparence en politique,325,4806,0.0676238035789
+170,56-60,Le handicap,26,4806,0.00540990428631
+171,56-60,Le logement,33,4806,0.00686641697878
+172,56-60,Le vivre ensemble,235,4806,0.0488972118186
+173,56-60,Les droits des animaux,125,4806,0.0260091552226
+174,56-60,Les droits des femmes,37,4806,0.0076987099459
+175,56-60,Les droits des personnes LGBT,169,4806,0.035164377861
+176,56-60,L’accueil des migrants,702,4806,0.14606741573
+177,56-60,L’emploi,116,4806,0.0241364960466
+178,56-60,L’économie,469,4806,0.0975863503953
+179,56-60,L’éducation,36,4806,0.00749063670412
+180,61 -65,La défense des droits humains,70,4953,0.0141328487785
+181,61 -65,La justice sociale,77,4953,0.0155461336564
+182,61 -65,La liberté de la presse et d’expression,62,4953,0.012517666061
+183,61 -65,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",470,4953,0.0948919846558
+184,61 -65,La politique étrangère,321,4953,0.0648092065415
+185,61 -65,La protection de l'environnement,95,4953,0.0191802947708
+186,61 -65,La religion,779,4953,0.157278417121
+187,61 -65,La santé,10,4953,0.00201897839693
+188,61 -65,"La sécurité, le terrorisme",741,4953,0.149606299213
+189,61 -65,La transparence en politique,330,4953,0.0666262870987
+190,61 -65,Le handicap,24,4953,0.00484554815263
+191,61 -65,Le logement,24,4953,0.00484554815263
+192,61 -65,Le vivre ensemble,276,4953,0.0557238037553
+193,61 -65,Les droits des animaux,132,4953,0.0266505148395
+194,61 -65,Les droits des femmes,36,4953,0.00726832222895
+195,61 -65,Les droits des personnes LGBT,196,4953,0.0395719765799
+196,61 -65,L’accueil des migrants,726,4953,0.146577831617
+197,61 -65,L’emploi,109,4953,0.0220068645265
+198,61 -65,L’économie,432,4953,0.0872198667474
+199,61 -65,L’éducation,43,4953,0.0086816071068
+200,66-70,La défense des droits humains,58,3784,0.0153276955603
+201,66-70,La justice sociale,76,3784,0.0200845665962
+202,66-70,La liberté de la presse et d’expression,78,3784,0.0206131078224
+203,66-70,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",390,3784,0.103065539112
+204,66-70,La politique étrangère,196,3784,0.0517970401691
+205,66-70,La protection de l'environnement,72,3784,0.0190274841438
+206,66-70,La religion,518,3784,0.13689217759
+207,66-70,La santé,7,3784,0.00184989429175
+208,66-70,"La sécurité, le terrorisme",534,3784,0.1411205074
+209,66-70,La transparence en politique,243,3784,0.0642177589852
+210,66-70,Le handicap,19,3784,0.00502114164905
+211,66-70,Le logement,22,3784,0.00581395348837
+212,66-70,Le vivre ensemble,247,3784,0.0652748414376
+213,66-70,Les droits des animaux,116,3784,0.0306553911205
+214,66-70,Les droits des femmes,31,3784,0.00819238900634
+215,66-70,Les droits des personnes LGBT,175,3784,0.0462473572939
+216,66-70,L’accueil des migrants,595,3784,0.157241014799
+217,66-70,L’emploi,81,3784,0.0214059196617
+218,66-70,L’économie,301,3784,0.0795454545455
+219,66-70,L’éducation,25,3784,0.0066067653277
+220,71-75,La défense des droits humains,30,1679,0.0178677784395
+221,71-75,La justice sociale,45,1679,0.0268016676593
+222,71-75,La liberté de la presse et d’expression,36,1679,0.0214413341275
+223,71-75,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",150,1679,0.0893388921977
+224,71-75,La politique étrangère,77,1679,0.0458606313282
+225,71-75,La protection de l'environnement,46,1679,0.027397260274
+226,71-75,La religion,220,1679,0.131030375223
+227,71-75,La santé,4,1679,0.00238237045861
+228,71-75,"La sécurité, le terrorisme",192,1679,0.114353782013
+229,71-75,La transparence en politique,111,1679,0.0661107802263
+230,71-75,Le handicap,11,1679,0.00655151876117
+231,71-75,Le logement,14,1679,0.00833829660512
+232,71-75,Le vivre ensemble,106,1679,0.0631328171531
+233,71-75,Les droits des animaux,71,1679,0.0422870756403
+234,71-75,Les droits des femmes,21,1679,0.0125074449077
+235,71-75,Les droits des personnes LGBT,94,1679,0.0559857057772
+236,71-75,L’accueil des migrants,276,1679,0.164383561644
+237,71-75,L’emploi,40,1679,0.0238237045861
+238,71-75,L’économie,114,1679,0.0678975580703
+239,71-75,L’éducation,21,1679,0.0125074449077
+240,76-80,La défense des droits humains,13,593,0.0219224283305
+241,76-80,La justice sociale,11,593,0.0185497470489
+242,76-80,La liberté de la presse et d’expression,14,593,0.0236087689713
+243,76-80,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",57,593,0.0961214165261
+244,76-80,La politique étrangère,40,593,0.0674536256324
+245,76-80,La protection de l'environnement,11,593,0.0185497470489
+246,76-80,La religion,73,593,0.123102866779
+247,76-80,La santé,3,593,0.00505902192243
+248,76-80,"La sécurité, le terrorisme",66,593,0.111298482293
+249,76-80,La transparence en politique,43,593,0.0725126475548
+250,76-80,Le handicap,3,593,0.00505902192243
+251,76-80,Le logement,1,593,0.00168634064081
+252,76-80,Le vivre ensemble,32,593,0.0539629005059
+253,76-80,Les droits des animaux,26,593,0.043844856661
+254,76-80,Les droits des femmes,10,593,0.0168634064081
+255,76-80,Les droits des personnes LGBT,42,593,0.070826306914
+256,76-80,L’accueil des migrants,88,593,0.148397976391
+257,76-80,L’emploi,19,593,0.0320404721754
+258,76-80,L’économie,38,593,0.0640809443508
+259,76-80,L’éducation,3,593,0.00505902192243
+260,Je préfère ne pas répondre,La défense des droits humains,1,172,0.00581395348837
+261,Je préfère ne pas répondre,La justice sociale,2,172,0.0116279069767
+262,Je préfère ne pas répondre,La liberté de la presse et d’expression,1,172,0.00581395348837
+263,Je préfère ne pas répondre,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",13,172,0.0755813953488
+264,Je préfère ne pas répondre,La politique étrangère,7,172,0.0406976744186
+265,Je préfère ne pas répondre,La protection de l'environnement,1,172,0.00581395348837
+266,Je préfère ne pas répondre,La religion,26,172,0.151162790698
+267,Je préfère ne pas répondre,La santé,3,172,0.0174418604651
+268,Je préfère ne pas répondre,"La sécurité, le terrorisme",34,172,0.197674418605
+269,Je préfère ne pas répondre,La transparence en politique,10,172,0.0581395348837
+270,Je préfère ne pas répondre,Le handicap,1,172,0.00581395348837
+271,Je préfère ne pas répondre,Le logement,1,172,0.00581395348837
+272,Je préfère ne pas répondre,Le vivre ensemble,9,172,0.0523255813953
+273,Je préfère ne pas répondre,Les droits des animaux,3,172,0.0174418604651
+274,Je préfère ne pas répondre,Les droits des personnes LGBT,11,172,0.0639534883721
+275,Je préfère ne pas répondre,L’accueil des migrants,22,172,0.127906976744
+276,Je préfère ne pas répondre,L’emploi,4,172,0.0232558139535
+277,Je préfère ne pas répondre,L’économie,22,172,0.127906976744
+278,Je préfère ne pas répondre,L’éducation,1,172,0.00581395348837
+279,Plus de 80 ans,La défense des droits humains,20,361,0.0554016620499
+280,Plus de 80 ans,La justice sociale,9,361,0.0249307479224
+281,Plus de 80 ans,La liberté de la presse et d’expression,11,361,0.0304709141274
+282,Plus de 80 ans,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",35,361,0.0969529085873
+283,Plus de 80 ans,La politique étrangère,19,361,0.0526315789474
+284,Plus de 80 ans,La protection de l'environnement,10,361,0.0277008310249
+285,Plus de 80 ans,La religion,34,361,0.0941828254848
+286,Plus de 80 ans,"La sécurité, le terrorisme",45,361,0.124653739612
+287,Plus de 80 ans,La transparence en politique,24,361,0.0664819944598
+288,Plus de 80 ans,Le handicap,5,361,0.0138504155125
+289,Plus de 80 ans,Le logement,3,361,0.00831024930748
+290,Plus de 80 ans,Le vivre ensemble,17,361,0.0470914127424
+291,Plus de 80 ans,Les droits des animaux,14,361,0.0387811634349
+292,Plus de 80 ans,Les droits des femmes,9,361,0.0249307479224
+293,Plus de 80 ans,Les droits des personnes LGBT,23,361,0.0637119113573
+294,Plus de 80 ans,L’accueil des migrants,42,361,0.116343490305
+295,Plus de 80 ans,L’emploi,13,361,0.0360110803324
+296,Plus de 80 ans,L’économie,24,361,0.0664819944598
+297,Plus de 80 ans,L’éducation,4,361,0.01108033241

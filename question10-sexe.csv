@@ -1,0 +1,17 @@
+,sexe,answer,count,total,value
+0,Autre,Le charisme,6,125,0.048
+1,Autre,Le parti,10,125,0.08
+2,Autre,Les propositions concrètes,102,125,0.816
+3,Autre,L’expérience,7,125,0.056
+4,Je préfère ne pas répondre,Le charisme,24,918,0.0261437908497
+5,Je préfère ne pas répondre,Le parti,22,918,0.0239651416122
+6,Je préfère ne pas répondre,Les propositions concrètes,840,918,0.915032679739
+7,Je préfère ne pas répondre,L’expérience,32,918,0.0348583877996
+8,Un homme,Le charisme,1305,22659,0.0575930094002
+9,Un homme,Le parti,311,22659,0.0137252305927
+10,Un homme,Les propositions concrètes,20048,22659,0.884769848625
+11,Un homme,L’expérience,995,22659,0.0439119113818
+12,Une femme,Le charisme,656,19256,0.0340673036975
+13,Une femme,Le parti,263,19256,0.0136580805983
+14,Une femme,Les propositions concrètes,17629,19256,0.915506855006
+15,Une femme,L’expérience,708,19256,0.036767760698

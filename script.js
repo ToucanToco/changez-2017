@@ -72,7 +72,7 @@ function updateWordCloud(data, clear, label, value) {
 
     function draw(words) {
       if (!d3.select(".wordcloud").node()) {
-        console.log('creating wordcloud')
+        console.log('Creating wordcloud')
         d3.select(".chart")
           .append("g")
           .classed("wordcloud", true)
@@ -119,12 +119,12 @@ var updateBarChart = function(data, clear, label, value) {
   if (!label) {
     label = 'answer';
   }
-  console.log('Update barchart', data, label, value);
-  // console.log(data[0]);
+  // console.log('Update barchart', data, label, value);
+
   data.sort(function(a, b) {
     return reverse*(b[value] - a[value]);
   });
-  console.log(data[0]);
+
   var totalHeight = data.length * (chartConfig.barHeight + chartConfig.labelHeight);
 
   var yScale = d3.scale.ordinal()
@@ -326,7 +326,6 @@ var updateMultiBarChart = function(data, group, label, value) {
     .transition()
     .duration(600)
     .attr('y', function(d) {
-      console.log(d[group],groupScale(d[group]));
       return chartConfig.labelHeight + groupScale(d[group]);
     })
     .attr('width', function(d) {return xScale(d[value]);});
@@ -472,7 +471,7 @@ function segmentBy(category) {
       if (error) {
         console.error(error);
       };
-      console.log(data);
+      // console.log(data);
       currentData = data;
       // nestedData = d3.nest()
       //   .key(function(d) { return d['answer']; })
@@ -489,6 +488,7 @@ function segmentBy(category) {
 }
 
 function loadQuestion(indexQuestion) {
+  toggleMenu(false);
   console.log('Loading quesiton ' + indexQuestion)
   currentDataName = 'question' + indexQuestion;
   currentQuestion = QUESTIONS[indexQuestion];
@@ -517,7 +517,7 @@ function loadQuestion(indexQuestion) {
       if (error) {
         console.error(error);
       };
-      console.log(data);
+      // console.log(data);
       totalData = data;
       updateChartType(data, currentQuestion.type, true)
     });
@@ -593,7 +593,6 @@ function init(){
     .append('div')
     .classed('menu-question-theme--label', true)
     .html(function(q){
-      console.log(q);
       return THEMES[q.key];
     });
 
@@ -606,7 +605,9 @@ function init(){
     .html(function(q){
       return q.text
     })
-    .on('click', function(d, i){loadQuestion(i)});
+    .on('click', function(d, i){
+      loadQuestion(d.id)}
+    );
 
 
   //
@@ -629,7 +630,6 @@ function previous() {
   loadQuestion(newIndex);
 }
 function toggleMenu(mustOpen) {
-  console.log(mustOpen);
   if (mustOpen == undefined) {
     mustOpen = !d3.select('.nav-menu')
     .classed('nav-menu--open');

@@ -1,0 +1,80 @@
+,sexe,answer,count,total,value
+0,Autre,La défense des droits humains,12,125,0.096
+1,Autre,La justice sociale,10,125,0.08
+2,Autre,La liberté de la presse et d’expression,1,125,0.008
+3,Autre,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",6,125,0.048
+4,Autre,La politique étrangère,1,125,0.008
+5,Autre,La protection de l'environnement,14,125,0.112
+6,Autre,La religion,3,125,0.024
+7,Autre,La santé,3,125,0.024
+8,Autre,"La sécurité, le terrorisme",2,125,0.016
+9,Autre,La transparence en politique,11,125,0.088
+10,Autre,Le handicap,3,125,0.024
+11,Autre,Le logement,1,125,0.008
+12,Autre,Le vivre ensemble,4,125,0.032
+13,Autre,Les droits des animaux,11,125,0.088
+14,Autre,Les droits des femmes,10,125,0.08
+15,Autre,Les droits des personnes LGBT,15,125,0.12
+16,Autre,L’emploi,8,125,0.064
+17,Autre,L’économie,4,125,0.032
+18,Autre,L’éducation,6,125,0.048
+19,Je préfère ne pas répondre,La défense des droits humains,76,918,0.082788671024
+20,Je préfère ne pas répondre,La justice sociale,83,918,0.0904139433551
+21,Je préfère ne pas répondre,La liberté de la presse et d’expression,19,918,0.020697167756
+22,Je préfère ne pas répondre,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",26,918,0.0283224400871
+23,Je préfère ne pas répondre,La politique étrangère,12,918,0.0130718954248
+24,Je préfère ne pas répondre,La protection de l'environnement,162,918,0.176470588235
+25,Je préfère ne pas répondre,La religion,4,918,0.00435729847495
+26,Je préfère ne pas répondre,La santé,20,918,0.0217864923747
+27,Je préfère ne pas répondre,"La sécurité, le terrorisme",16,918,0.0174291938998
+28,Je préfère ne pas répondre,La transparence en politique,87,918,0.0947712418301
+29,Je préfère ne pas répondre,Le handicap,18,918,0.0196078431373
+30,Je préfère ne pas répondre,Le logement,12,918,0.0130718954248
+31,Je préfère ne pas répondre,Le vivre ensemble,66,918,0.0718954248366
+32,Je préfère ne pas répondre,Les droits des animaux,60,918,0.0653594771242
+33,Je préfère ne pas répondre,Les droits des femmes,55,918,0.0599128540305
+34,Je préfère ne pas répondre,Les droits des personnes LGBT,18,918,0.0196078431373
+35,Je préfère ne pas répondre,L’accueil des migrants,18,918,0.0196078431373
+36,Je préfère ne pas répondre,L’emploi,36,918,0.0392156862745
+37,Je préfère ne pas répondre,L’économie,32,918,0.0348583877996
+38,Je préfère ne pas répondre,L’éducation,98,918,0.106753812636
+39,Un homme,La défense des droits humains,1344,22659,0.0593141797961
+40,Un homme,La justice sociale,2907,22659,0.128293393354
+41,Un homme,La liberté de la presse et d’expression,459,22659,0.0202568515822
+42,Un homme,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",464,22659,0.0204775144534
+43,Un homme,La politique étrangère,432,22659,0.0190652720773
+44,Un homme,La protection de l'environnement,3440,22659,0.151816055431
+45,Un homme,La religion,131,22659,0.00578136722715
+46,Un homme,La santé,504,22659,0.0222428174235
+47,Un homme,"La sécurité, le terrorisme",644,22659,0.028421377819
+48,Un homme,La transparence en politique,2518,22659,0.111125821969
+49,Un homme,Le handicap,404,22659,0.0178295599982
+50,Un homme,Le logement,334,22659,0.0147402798005
+51,Un homme,Le vivre ensemble,1597,22659,0.0704797210821
+52,Un homme,Les droits des animaux,984,22659,0.043426453065
+53,Un homme,Les droits des femmes,371,22659,0.0163731850479
+54,Un homme,Les droits des personnes LGBT,153,22659,0.00675228386072
+55,Un homme,L’accueil des migrants,226,22659,0.00997396178119
+56,Un homme,L’emploi,1612,22659,0.0711417096959
+57,Un homme,L’économie,1495,22659,0.0659781985083
+58,Un homme,L’éducation,2640,22659,0.116509996028
+59,Une femme,La défense des droits humains,1250,19256,0.0649148317408
+60,Une femme,La justice sociale,1912,19256,0.0992937266307
+61,Une femme,La liberté de la presse et d’expression,223,19256,0.0115808059826
+62,Une femme,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",624,19256,0.032405484005
+63,Une femme,La politique étrangère,206,19256,0.0106979642709
+64,Une femme,La protection de l'environnement,3087,19256,0.160313668467
+65,Une femme,La religion,64,19256,0.00332363938513
+66,Une femme,La santé,538,19256,0.0279393435812
+67,Une femme,"La sécurité, le terrorisme",381,19256,0.0197860407146
+68,Une femme,La transparence en politique,1276,19256,0.066265060241
+69,Une femme,Le handicap,515,19256,0.0267449106772
+70,Une femme,Le logement,278,19256,0.0144370585791
+71,Une femme,Le vivre ensemble,1315,19256,0.0682904029913
+72,Une femme,Les droits des animaux,2226,19256,0.115600332364
+73,Une femme,Les droits des femmes,944,19256,0.0490236809306
+74,Une femme,Les droits des personnes LGBT,191,19256,0.00991898628999
+75,Une femme,L’accueil des migrants,274,19256,0.0142293311176
+76,Une femme,L’emploi,1104,19256,0.0573327793934
+77,Une femme,L’économie,638,19256,0.0331325301205
+78,Une femme,L’éducation,2210,19256,0.114769422518
