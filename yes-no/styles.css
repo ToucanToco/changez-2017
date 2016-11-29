@@ -1,0 +1,25 @@
+.yes-no {
+  width: 800px;
+  height: 400px;
+}
+
+.yes-no__group[data-sentiment="very-positive"] .yes-no__bar {
+  fill: green;
+}
+
+.yes-no__group[data-sentiment="quite-positive"] .yes-no__bar {
+  fill: blue; --incr
+}
+
+.yes-no__group[data-sentiment="quite-negative"] .yes-no__bar {
+  fill: orange;
+}
+
+.yes-no__group[data-sentiment="very-negative"] .yes-no__bar {
+  fill: red;
+}
+
+.yes-no__divider {
+  stroke: gray;
+  stroke-width: 3px;
+}
