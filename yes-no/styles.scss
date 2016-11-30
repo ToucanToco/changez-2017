@@ -1,0 +1,48 @@
+---
+---
+
+$positive-color: green;
+$negative-color: red;
+
+$divider-color: gray;
+
+#yes-no {
+  width: 800px;
+  height: 400px;
+}
+
+.yes-no__value,
+.yes-no__label {
+  opacity: 0;
+  transition: opacity 0.5s;
+  text-anchor: middle;
+}
+
+.yes-no__group:hover,
+.yes-no__group--biggest {
+  .yes-no__value,
+  .yes-no__label {
+    opacity: 1;
+  }
+}
+
+.yes-no__group[data-sentiment="very-positive"] .yes-no__bar {
+  fill: $positive-color;
+}
+
+.yes-no__group[data-sentiment="quite-positive"] .yes-no__bar {
+  fill: blue;
+}
+
+.yes-no__group[data-sentiment="quite-negative"] .yes-no__bar {
+  fill: orange;
+}
+
+.yes-no__group[data-sentiment="very-negative"] .yes-no__bar {
+  fill: $negative-color;
+}
+
+.yes-no__divider {
+  stroke: $divider-color;
+  stroke-width: 3px;
+}
