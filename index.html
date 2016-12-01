@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>D3 Dataviz</title>
   <link type="text/css" rel="stylesheet" href="styles.css">
+  <link type="text/css" rel="stylesheet" href="yes-no/styles.css">
 </head>
 
 <body>
@@ -27,7 +28,7 @@
       Ce service vous est fourni avec des bisous.
       <div class="go-button" onclick="loadQuestion(11)">On commence ?</div>
     </div>
-    <div class="chart-section chart-section--leaderboard">
+    <div class="chart-section chart-section--leaderboard chart-section--yes-no">
       <div>
         <span onclick="previous()" >< Précédent</span>
         <span> | </span>
@@ -71,10 +72,13 @@
 
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.2/lodash.js"></script>
   <script src="sugar.min.js"></script>
   <script src="d3-3.5.17.js"></script>
   <script src="d3.layout.cloud.js"></script>
   <script src="constants.js"></script>
+  <script src="yes-no/yes-no.js"></script>
   <script src="script.js"></script>
 
 </body>

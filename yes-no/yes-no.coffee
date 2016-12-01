@@ -39,7 +39,8 @@ YesNoChart = (DOMElement, config) ->
   percentageFormatter = d3.format '.1%'
 
   yesNoChart = (data) ->
-    scales = _computeScales selection.node(), data
+    scales = _computeScales DOMElement, data
+    selection = d3.select DOMElement
 
     layeredData = _ data
     .map (d) ->
@@ -66,7 +67,8 @@ YesNoChart = (DOMElement, config) ->
     .append 'g'
     .classed GROUP_CLASS, true
     .attr 'data-sentiment', (d) ->
-      (_.find config.sentiments, (e) -> e.label is d.label).sentiment
+      (_.find config.sentiments, (e) -> e.label is d.label)?.sentiment
+    .attr 'transform', (d) -> "translate(#{scales.width d.values[0].y0}, 0)"
 
     newGroups.append 'text'
     .classed LABEL_CLASS, true
@@ -78,19 +80,30 @@ YesNoChart = (DOMElement, config) ->
     .text (d) -> percentageFormatter d.value
     .attr 'y', 50 + barHeight + 20
 
-    groups.selectAll ".#{VALUE_CLASS}, .#{LABEL_CLASS}"
+    transitioningGroups = groups
+    .transition()
+    .duration 1000
+
+    transitioningGroups
+    .select ".#{VALUE_CLASS}"
+    .attr 'x', (d) -> scales.width d.value / 2
+
+    transitioningGroups
+    .select ".#{LABEL_CLASS}"
     .attr 'x', (d) -> scales.width d.value / 2
 
     newGroups.append 'rect'
     .classed BAR_CLASS, true
-    .attr 'height', barHeight
-    .attr 'y', 50
-
-    groups
-    .attr 'transform', (d) -> "translate(#{scales.width d.values[0].y0}, 0)"
-
-    groups.selectAll ".#{BAR_CLASS}"
+    .attr 'y', 50 + barHeight / 2
+    .attr 'height', 0
     .attr 'width', (d) -> scales.width d.value
+
+    transitioningGroups
+    .attr 'transform', (d) -> "translate(#{scales.width d.values[0].y0}, 0)"
+    .select ".#{BAR_CLASS}"
+    .attr 'width', (d) -> scales.width d.value
+    .attr 'y', 50
+    .attr 'height', barHeight
 
     divider = groupsContainer.selectAll ".#{DIVIDER_CLASS}"
     .data [_.find layeredData, (d) -> config.divider.before is d.label], (d) -> d.label
@@ -98,41 +111,19 @@ YesNoChart = (DOMElement, config) ->
     divider.enter()
     .append 'line'
     .classed DIVIDER_CLASS, true
+    .attr 'x1', (scales.width.range()[1] + scales.width.range()[0]) / 2
+    .attr 'y1', 50 - 10
+    .attr 'x2', (d) -> (scales.width.range()[1] + scales.width.range()[0]) / 2
+    .attr 'y2', 50 + barHeight + 10
 
     divider
+    .transition()
+    .delay 1000
+    .duration 500
     .attr 'x1', (d) -> scales.width d.values[0].y0
-    .attr 'y1', 50 - 10
     .attr 'x2', (d) -> scales.width d.values[0].y0
-    .attr 'y2', 50 + barHeight + 10
 
     biggestGroupValue = d3.max layeredData, (d) -> d.value
     groups.classed BIGGEST_GROUP_CLASS, (d) -> d.value is biggestGroupValue
 
-
-
-selection = d3.select '#yes-no'
-
-config =
-  label: (d) -> d.label
-  value: (d) -> d.value
-  sentiments: [
-    label: 'Non pas du tout'
-    sentiment: 'very-negative'
-  ,
-    label: 'Non pas complètement'
-    sentiment: 'quite-negative'
-  ,
-    label: 'Oui plutôt'
-    sentiment: 'quite-positive'
-  ,
-    label: 'Oui complètement'
-    sentiment: 'very-positive'
-  ]
-  divider: before: 'Oui plutôt'
-
-yesNoChart = YesNoChart selection.node(), config
-d3.csv '../question5.csv', (d) ->
-  label: d.answer
-  value: +d.value
-, (err, data) ->
-  yesNoChart data
+window.YesNoChart = YesNoChart

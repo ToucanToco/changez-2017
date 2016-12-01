@@ -111,6 +111,40 @@ function updateWordCloud(data, clear, label, value) {
   }
 }
 
+var updateYesNoChart = function(data, clear) {
+  if (!!clear) {
+    d3.select(".chart > *").remove();
+  }
+
+  var svgSelection = d3
+    .select(".chart")
+    .attr('width', chartConfig.width)
+    .attr('height', chartConfig.height);
+
+  yesNoChart = YesNoChart(
+    svgSelection.node(), {
+      label: function(d){ return d.answer },
+      value: function(d){ return d.value },
+      sentiments: [{
+        label: 'Non pas du tout',
+        sentiment: 'very-negative'
+      },{
+        label: 'Non pas complètement',
+        sentiment: 'quite-negative'
+      },{
+        label: 'Oui plutôt',
+        sentiment: 'quite-positive'
+      },{
+        label: 'Oui complètement',
+        sentiment: 'very-positive'
+      }],
+      divider: {before: 'Oui plutôt'}
+    }
+  );
+
+  yesNoChart(data);
+}
+
 var updateBarChart = function(data, clear, label, value) {
   var reverse = 1;
   if (!value) {
@@ -367,6 +401,8 @@ var updateMultiBarChart = function(data, group, label, value) {
 function updateChartType(data, type, clear) {
   if (type == 'leaderboard') {
     updateBarChart(data, clear);
+  } else if(type == 'yes-no') {
+    updateYesNoChart(data, clear);
   } else {
     updateWordCloud(data, clear);
   }
