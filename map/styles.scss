@@ -1,0 +1,25 @@
+---
+---
+
+$missing-color: lightgray;
+$stroke-color: white;
+$legend-color: $missing-color;
+
+#departements-map {
+  width: 800px;
+  height: 600px;
+}
+
+.departements-map__legend-bg {
+  fill: $legend-color;
+}
+
+.departements-map__feature {
+  stroke: $stroke-color;
+  stroke-width: 1px;
+  fill: $missing-color;
+  transition: fill 1s;
+}
+
+.departements-map__feature--missing {
+}
