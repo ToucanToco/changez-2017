@@ -23,7 +23,7 @@ def clean_value(v):
         else:
             return "notaword"
     except Exception as e:
-        print "can't decode {} -- skipping".format(v)
+        #print "can't decode {} -- skipping".format(v)
         # return v
         return 'notaword'
 
@@ -102,6 +102,14 @@ def compute_data_for_question(q_index):
     df_q1_seg = compute_question_count_by_seg(q_index, 'À quelle tendance politique vous identifiez-vous?', 'tendance')
     df_q1_seg.to_csv('question{}-tendance.csv'.format(q_index))
 
+    print '-- compute by commune'
+    df_q1_seg = compute_question_count_by_seg(q_index, 'Quelle est la taille de votre commune ?', 'taille_commune')
+    df_q1_seg.to_csv('question{}-taille_commune.csv'.format(q_index))
+
+    print '-- compute by revenu'
+    df_q1_seg = compute_question_count_by_seg(q_index, 'Quelle est votre tranche de revenu annuel ?', 'revenu')
+    df_q1_seg.to_csv('question{}-revenu.csv'.format(q_index))
+
 def compute_question_aggregates(q_index):
     """
     Compute the repartition by segment categories for a given question
@@ -133,8 +141,9 @@ def compute_question_aggregates(q_index):
 # Repartition
 # df = compute_question_aggregates(0)
 # df.to_csv('q0-aggregate.csv')
-
-compute_data_for_question(11)
+for i in range(18):
+    compute_data_for_question(i)
+    print 'question', i
 # df_q1 = compute_question_repartition(0)
 # df_q1.to_csv('question0.csv')
 #

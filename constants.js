@@ -7,6 +7,8 @@ var SEGMENTS = [
   {id: 'age', label: 'Par âge', question: 'Quel âge avez-vous ?'},
   {id: 'sexe', label: 'Par sexe', question: 'Vous êtes :'},
   {id: 'tendance', label: 'Par tendance politique', question: 'A quelle tendance politique vous identifiez-vous ?'},
+  {id: 'taille_commune', label: 'Par taille de commune', question: 'Quelle est la taille de votre commune ?'},
+  {id: 'revenu', label: 'Par revenu', question: 'Quelle est votre tranche de revenu annuel ?'},
 ]
 
 var QUESTIONS = [

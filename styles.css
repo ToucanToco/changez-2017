@@ -2,7 +2,7 @@
 /**** COLORS ****/
 /****************/
 /*dark-gray: #202020*/
-/*green: rgb(100, 226, 97)*/
+/*green: rgb(234, 46, 46)*/
 /*dark red: #88082f*/
 
 html, body {
@@ -38,7 +38,7 @@ body {
 
 }
 .chart .bar {
-  fill: #88082f;
+  fill: rgb(234, 46, 46);
 }
 
 .chart .bar-label {
@@ -52,7 +52,7 @@ body {
 }
 .chart .bar-value.bar-value--small {
   text-anchor: start;
-  fill: #88082f;
+  fill: rgb(234, 46, 46);
   font-weight: bold;
 }
 
@@ -65,7 +65,7 @@ body {
 
 .choose-segment .segment {
   padding: 5px;
-  border: 1px rgb(100, 226, 97) solid;
+  border: 1px rgb(234, 46, 46) solid;
   margin: 3px;
 }
 
@@ -84,7 +84,7 @@ body {
 }
 
 .go-button {
-  background-color: rgb(100, 226, 97);
+  background-color: rgb(234, 46, 46);
   padding: 5px;
   color: white;
   margin-top: 20px;
@@ -120,7 +120,7 @@ body {
   position: fixed;
   left: 0;
   top: 0;
-  background-color: rgb(100, 226, 97);
+  background-color: rgb(234, 46, 46);
   transition: all ease 300ms;
   -webkit-transition: all ease 300ms;
   -moz-transition: all ease 300ms;
@@ -171,7 +171,7 @@ body {
   list-style-type: none;
 }
 .menu-question-theme--label {
-  color: rgb(100, 226, 97);
+  color: rgb(234, 46, 46);
   font-weight: bold;
   text-transform: uppercase;
   padding:5px;
@@ -208,12 +208,12 @@ body {
 }
 .segment-controls span {
   padding: 10px;
-  border: 1px rgb(100, 226, 97) solid;
+  border: 1px rgb(234, 46, 46) solid;
   margin: 3px;
   transition: all ease 200ms;
 }
 .segment.selected,
 .segment-controls span.selected {
-  background: rgb(100, 226, 97);
+  background: rgb(234, 46, 46);
   color: white;
 }
