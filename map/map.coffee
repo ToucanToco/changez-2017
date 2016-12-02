@@ -306,7 +306,7 @@ DepartementsMap = (DOMElement, config) ->
 
     else
       legendSelection.select ".#{LEGEND_DEPT_CLASS}"
-      .text newSelection.departement
+      .text newSelection.departementName
 
       legendSelection.select ".#{LEGEND_VALUE_CLASS}"
       .text percentageFormatter newSelection.value
@@ -387,7 +387,7 @@ DepartementsMap = (DOMElement, config) ->
         lastSelection?.departement is config.departement d.data
 
       if newSelection and config.value newSelection
-        lastSelection.value: config.value newSelection.data
+        lastSelection.value = config.value newSelection.data
         _updateLegend lastSelection
       else _updateLegend()
 
