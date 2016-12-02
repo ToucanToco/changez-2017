@@ -233,7 +233,7 @@
 
 
 departementFeatures = undefined
-d3.json '/map/departements-details.json', (req, json) ->
+d3.json 'departements-details.json', (req, json) ->
   departementFeatures = json.features
 
 
