@@ -284,9 +284,9 @@ DepartementsMap = (DOMElement, config) ->
   .classed LEGEND_COLOR_CLASS, true
   .attr
     x: -15
-    y: 0
-    width: 10
-    height: 8
+    y: -15
+    width: 8
+    height: 20
 
   legendSelection.append 'text'
   .attr 'dy', '1.5em'
@@ -302,7 +302,7 @@ DepartementsMap = (DOMElement, config) ->
       .text ''
 
       legendSelection.select ".#{LEGEND_COLOR_CLASS}"
-      .style 'fill', 'gray'
+      .style 'fill', 'transparent'
 
     else
       legendSelection.select ".#{LEGEND_DEPT_CLASS}"
@@ -310,6 +310,9 @@ DepartementsMap = (DOMElement, config) ->
 
       legendSelection.select ".#{LEGEND_VALUE_CLASS}"
       .text percentageFormatter newSelection.value
+
+      legendSelection.select ".#{LEGEND_COLOR_CLASS}"
+      .style 'fill', newSelection.color
 
     lastSelection = newSelection
 
@@ -368,19 +371,22 @@ DepartementsMap = (DOMElement, config) ->
   departementsMap = (data) ->
     scale = _computeScale data
 
-    features.each (d) ->
-      d.data = _.find data, (dd) ->
-        d.properties.CODE_DEPT is config.departement dd
-    .classed MISSING_CLASS, (d) -> not _hasData d
-    .style 'fill', (d) ->
+    colorAccessor = (d) ->
       if _hasData d
         (scale config.value d.data).toString()
       else
         ''
+
+    features.each (d) ->
+      d.data = _.find data, (dd) ->
+        d.properties.CODE_DEPT is config.departement dd
+    .classed MISSING_CLASS, (d) -> not _hasData d
+    .style 'fill', colorAccessor
     .on 'click', (d) -> _updateLegend
       departement: config.departement d.data
       departementName: d.properties.NOM_DEPT
       value: config.value d.data
+      color: colorAccessor d
 
     if lastSelection
       newSelection = _.find data, (d) ->
@@ -388,6 +394,7 @@ DepartementsMap = (DOMElement, config) ->
 
       if newSelection and config.value newSelection
         lastSelection.value = config.value newSelection.data
+        lastSelection.color = colorAccessor data: newSelection
         _updateLegend lastSelection
       else _updateLegend()
 
