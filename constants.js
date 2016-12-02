@@ -36,5 +36,5 @@ var THEMES = {
   'cause': 'Les causes',
   'programme': 'Les programmes politiques',
   'presidentielle': 'Les candidats à la présidentielle',
-  'internet': "La démocracie en ligne"
+  'internet': "La démocratie en ligne"
 }
