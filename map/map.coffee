@@ -22,12 +22,6 @@ DepartementsMap = (DOMElement, config) ->
   SELECTION_DEPT_CLASS = "#{SELECTION_CLASS}-departement"
   SELECTION_VALUE_CLASS = "#{SELECTION_CLASS}-value"
   SELECTION_COLOR_CLASS = "#{SELECTION_CLASS}-color"
-  # GROUP_CLASS = "#{COMPONENT_CLASS}__group"
-  # BIGGEST_GROUP_CLASS = "#{GROUP_CLASS}--biggest"
-  # LABEL_CLASS = "#{COMPONENT_CLASS}__label"
-  # BAR_CLASS = "#{COMPONENT_CLASS}__bar"
-  # VALUE_CLASS = "#{COMPONENT_CLASS}__value"
-  # DIVIDER_CLASS = "#{COMPONENT_CLASS}__divider"
 
   margins =
     top: 30
@@ -122,15 +116,18 @@ DepartementsMap = (DOMElement, config) ->
 
   centroid = path.centroid idfFeaturesData[0]
   bbox = path.bounds idfFeaturesData[0]
-  idfWidth = 120
-  idfHeight = 120
-  idfOffset = left: 0, top: 300
+  if window.innerWidth < 767
+    idfSize = 80
+    idfOffset = left: 300, top: -100
+  else
+    idfSize = 120
+    idfOffset = left: 50, top: 300
 
   idfX = centroid[0]
   idfY = centroid[1]
-  idfK = (idfWidth/2)/(bbox[1][0] - bbox[0][0])
+  idfK = (idfSize/2)/(bbox[1][0] - bbox[0][0])
 
-  trStr = "translate(" + idfWidth / 2 + "," + idfHeight / 2 + ")" +
+  trStr = "translate(" + idfSize / 2 + "," + idfSize / 2 + ")" +
     "scale(" + idfK + ")translate(" + -idfX + "," + -idfY + ")";
   idfFeatures = mapSelection
   .append 'g'

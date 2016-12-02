@@ -414,9 +414,11 @@ function fillInfoSegment(segment, section) {
   if (segment) {
     info = "<div class='info-segment__label'>Catégorie : "+ segment.label +"</div>"
     info += "<div class='info-segment__question'>Question posée : <i>"+ segment.question +"</i></div>"
+  } else {
+    info += "Cliquez sur l'un des boutons de catégorie au dessus pour filtrer les données";
   }
-  d3.select(section + ' .info-segment')
-    .html(info)
+  d3.select(sectionSelector + ' .info-segment')
+  .html(info);
 }
 
 function fillQuestion(indexQuestion, section) {
@@ -464,8 +466,6 @@ function chooseSegment(data, group) {
   d3.select(sectionSelector + ' .choose-segment *').remove();
   d3.select(sectionSelector + ' .choose-segment').html('');
   if (!data) {
-    d3.select(sectionSelector + ' .choose-segment')
-    .html("Cliquez sur l'un des boutons de catégorie au dessus pour filtrer les données")
     return;
   }
   var uniques = data.unique(function(d){
@@ -481,7 +481,7 @@ function chooseSegment(data, group) {
     // .data(d3.map(nestedData[0].values, function(d){return d[group];}).keys());
 
   segments.enter()
-    .append('div')
+    .append('span')
     .classed('segment', true)
     .attr('data-segment', function(d){return d;})
     .html(function(d){return d;})
@@ -559,8 +559,8 @@ function loadMap() {
 
       var svgSelection = d3
         .select(".chart")
-        .attr('width', chartConfig.width)
-        .attr('height', chartConfig.height);
+        .attr('width', window.innerWidth < 767 ? '450' : '800')
+        .attr('height', '600');
 
       departementsMap = DepartementsMap(
         svgSelection.node(), {

@@ -1,3 +1,31 @@
+---
+---
+// Media queries
+$screen-phone-max: 767px;
+$screen-tablet-max: 1024px;
+
+@mixin respond-to($media) {
+  @if $media == phone {
+    @media screen and (max-width: $screen-phone-max),
+      projection and (max-width: $screen-phone-max) {
+      @content;
+    }
+  }
+  @else if $media == tablet {
+    @media screen and (min-width: $screen-phone-max+1) and (max-width: $screen-tablet-max),
+      projection and (min-width: $screen-phone-max+1) and (max-width: $screen-tablet-max) {
+      @content;
+    }
+  }
+  @else if $media == desktop {
+    @media screen and (min-width: $screen-tablet-max+1),
+    projection and (min-width: $screen-tablet-max+1){
+      @content;
+    }
+  }
+}
+
+
 /****************/
 /**** COLORS ****/
 /****************/
@@ -10,6 +38,12 @@ html, body {
   margin: 0;
 }
 
+@include respond-to(phone) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 body {
   font: 16px/1.5 "Open Sans", "Helvetica Neue", Helvetica, arial, sans-serif;
   font-weight: 300;
@@ -19,6 +53,14 @@ body {
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.question-label {
+  @include respond-to(phone) {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+}
+
 .u-hidden {
   display: none !important;
 }
@@ -26,6 +68,10 @@ body {
   display: flex;
   flex-direction: column;
   width: 800px;
+
+  @include respond-to(phone) {
+    width: 100%;
+  }
 }
 
 .segment-container {}
@@ -33,6 +79,12 @@ body {
 .chart-container {
   width: 80%;
   padding: 20px;
+
+  @include respond-to(phone) {
+    width: 100%;
+    padding: 0;
+    overflow: scroll;
+  };
 }
 .chart {
 
@@ -56,18 +108,6 @@ body {
   font-weight: bold;
 }
 
-.choose-segment {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  max-height: 150px;
-}
-
-.choose-segment .segment {
-  padding: 5px;
-  border: 1px rgb(234, 46, 46) solid;
-  margin: 3px;
-}
 
 .info-segment__question {
   color: #202020;
@@ -100,10 +140,13 @@ body {
   text-anchor: middle;
 }
 
+$menu-width: 700px;
+$menu-width--mobile: 85%;
+
 .nav-menu {
   position: fixed;
-  width: 700px;
-  left: -700px;
+  width: $menu-width;
+  left: -$menu-width;
   background: white;
   transition: all ease 300ms;
   -webkit-transition: all ease 300ms;
@@ -114,6 +157,11 @@ body {
   height: 100%;
   overflow: scroll;
   z-index: 1;
+
+  @include respond-to(phone) {
+    width: $menu-width--mobile;
+    left: -$menu-width--mobile;
+  }
 }
 
 .toggle-menu-handle {
@@ -143,7 +191,11 @@ body {
   left: 0;
 }
 .nav-menu.nav-menu--open .toggle-menu-handle {
-  left: 700px;
+  left: $menu-width;
+
+  @include respond-to(phone) {
+    left: $menu-width--mobile;
+  }
 }
 .menu-overlay {
   position: absolute;
@@ -192,23 +244,39 @@ body {
 }
 
 .segment-container {
-  height: 150px;
+  // height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  overflow-y: auto;
 }
-.segment-controls {
-  height: 45px;
+.segment-controls,
+.choose-segment {
+  @include respond-to(phone) {
+    width: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 5px 0;
+  }
+
+  span {
+    display: inline-block;
+    padding: 10px;
+    border: 1px rgb(234, 46, 46) solid;
+    margin: 3px;
+    transition: background,color ease 200ms;
+    cursor: pointer;
+
+    @include respond-to(phone) {
+      padding: 3px;
+      margin: 0;
+    }
+  }
 }
-.segment-controls span {
-  padding: 10px;
-  border: 1px rgb(234, 46, 46) solid;
-  margin: 3px;
-  transition: all ease 200ms;
-  cursor: pointer;
-}
+
 .segment.selected,
-.segment-controls span.selected {
+.segment-controls span.selected,
+.choose-segment span.selected {
   background: rgb(234, 46, 46);
   color: white;
 }
