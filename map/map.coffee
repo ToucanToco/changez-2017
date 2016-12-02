@@ -70,7 +70,7 @@
 #         }
 #       },true);
 #
-#
+# #
 #       function drawIDF (data) {
 #         var _data = topojson.feature(cartoData, cartoData.objects['departements-details']).features;
 #         _data = _data.filter(function (d) {
@@ -232,9 +232,9 @@
 #   }
 
 
-departementFeatures = undefined
+departementFeaturesData = undefined
 d3.json 'departements-details.json', (req, json) ->
-  departementFeatures = json.features
+  departementFeaturesData = json.features
 
 
 DepartementsMap = (DOMElement, config) ->
@@ -245,6 +245,7 @@ DepartementsMap = (DOMElement, config) ->
   MAP_CLASS = "#{COMPONENT_CLASS}__map"
   FEATURE_CLASS = "#{COMPONENT_CLASS}__feature"
   MISSING_CLASS = "#{FEATURE_CLASS}--missing"
+  IDF_CLASS = "#{FEATURE_CLASS}--idf"
 
   LEGEND_CLASS = "#{COMPONENT_CLASS}__legend"
   LEGEND_BG_CLASS = "#{LEGEND_CLASS}-bg"
@@ -326,8 +327,10 @@ DepartementsMap = (DOMElement, config) ->
   path = d3.geo.path()
   .projection projection
 
-  features = mapSelection.selectAll 'path'
-  .data departementFeatures
+  features = mapSelection
+  .append 'g'
+  .selectAll ".#{FEATURE_CLASS}"
+  .data departementFeaturesData
 
   newFeatures = features.enter()
   .append 'path'
@@ -338,23 +341,35 @@ DepartementsMap = (DOMElement, config) ->
   .delay (d, i) -> 10 * i
   .attr 'opacity', 1
 
-  # .classed
-  # function(d) {
-  #   var c = 'entity';
-  #   var selected, cur;
-  #   if (d.properties.CODE_DEPT[0] == '0') {
-  #     selected = d.properties.CODE_DEPT[1]
-  #   } else {
-  #     selected = d.properties.CODE_DEPT
-  #   }
-  #   cur = _.findWhere(data, { departement: selected });
-  #   if (cur) {
-  #      c += ' carto-cat'+scale(cur[scope.chartController.filters.value]);
-  #   }
-  #
-  #   return c;
-  # })
+  # Draw IDF
+  idfFeaturesData = _.filter departementFeaturesData, (d) ->
+    _.includes ["75", "92", "94", "93"], d.properties.CODE_DEPT
 
+  centroid = path.centroid idfFeaturesData[0]
+  bbox = path.bounds idfFeaturesData[0]
+  idfWidth = 120
+  idfHeight = 120
+  idfOffset = left: 0, top: 300
+
+  idfX = centroid[0]
+  idfY = centroid[1]
+  idfK = (idfWidth/2)/(bbox[1][0] - bbox[0][0])
+
+  trStr = "translate(" + idfWidth / 2 + "," + idfHeight / 2 + ")" +
+    "scale(" + idfK + ")translate(" + -idfX + "," + -idfY + ")";
+  idfFeatures = mapSelection
+  .append 'g'
+  .attr 'transform', 'translate('+idfOffset.left+','+idfOffset.top+')'
+  .append 'g'
+  .attr 'transform', trStr
+
+  idfFeatures.selectAll ".#{FEATURE_CLASS}#{IDF_CLASS}"
+  .data idfFeaturesData
+  .enter()
+  .append 'path'
+  .classed FEATURE_CLASS, true
+  .classed IDF_CLASS, true
+  .attr 'd', path
 
   _computeScale = (data) ->
     accentColor = d3.rgb 234, 46, 46
@@ -377,7 +392,8 @@ DepartementsMap = (DOMElement, config) ->
       else
         ''
 
-    features.each (d) ->
+    mapSelection.selectAll ".#{FEATURE_CLASS}"
+    .each (d) ->
       d.data = _.find data, (dd) ->
         d.properties.CODE_DEPT is config.departement dd
     .classed MISSING_CLASS, (d) -> not _hasData d
@@ -397,9 +413,6 @@ DepartementsMap = (DOMElement, config) ->
         lastSelection.color = colorAccessor data: newSelection
         _updateLegend lastSelection
       else _updateLegend()
-
-
-
 
 
 window.DepartementsMap = DepartementsMap
