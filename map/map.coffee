@@ -109,6 +109,8 @@ DepartementsMap = (DOMElement, config) ->
   .delay (d, i) -> 10 * i
   .attr 'opacity', 1
 
+  departementList = _.map departementFeaturesData, (d) -> d.properties.CODE_DEPT
+
   # Draw IDF
   idfFeaturesData = _.filter departementFeaturesData, (d) ->
     _.includes ["75", "92", "94", "93"], d.properties.CODE_DEPT
@@ -150,6 +152,7 @@ DepartementsMap = (DOMElement, config) ->
   _hasData = (d) -> d.data?
 
   departementsMap = (data) ->
+    data = _.filter data, (d) -> _.includes departementList, config.departement d
     scale = _computeScale data
 
     colorAccessor = (d) ->
