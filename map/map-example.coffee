@@ -11,10 +11,3 @@ setTimeout ->
     value: +d.value
   , (err, data) -> departementsMap data
 , 1000
-
-
-# d3.csv '../question5.csv', (d) ->
-#   label: d.answer
-#   value: +d.value
-# , (err, data) ->
-#   departementsMap data
