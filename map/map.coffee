@@ -16,10 +16,12 @@ DepartementsMap = (DOMElement, config) ->
   IDF_CLASS = "#{FEATURE_CLASS}--idf"
 
   LEGEND_CLASS = "#{COMPONENT_CLASS}__legend"
-  LEGEND_BG_CLASS = "#{LEGEND_CLASS}-bg"
-  LEGEND_DEPT_CLASS = "#{LEGEND_CLASS}-departement"
-  LEGEND_VALUE_CLASS = "#{LEGEND_CLASS}-value"
-  LEGEND_COLOR_CLASS = "#{LEGEND_CLASS}-color"
+
+  SELECTION_CLASS = "#{COMPONENT_CLASS}__selection"
+  SELECTION_BG_CLASS = "#{SELECTION_CLASS}-bg"
+  SELECTION_DEPT_CLASS = "#{SELECTION_CLASS}-departement"
+  SELECTION_VALUE_CLASS = "#{SELECTION_CLASS}-value"
+  SELECTION_COLOR_CLASS = "#{SELECTION_CLASS}-color"
   # GROUP_CLASS = "#{COMPONENT_CLASS}__group"
   # BIGGEST_GROUP_CLASS = "#{GROUP_CLASS}--biggest"
   # LABEL_CLASS = "#{COMPONENT_CLASS}__label"
@@ -42,50 +44,53 @@ DepartementsMap = (DOMElement, config) ->
   .classed MAP_CLASS, true
   .attr 'transform', "translate(0, #{legendHeight})"
 
-  legendSelection = svgSelection.append 'g'
-  .classed LEGEND_CLASS, true
+  selectionSelection = svgSelection.append 'g'
+  .classed SELECTION_CLASS, true
   .attr 'transform', "translate(#{margins.left}, #{margins.top})"
 
-  legendSelection.append 'text'
-  .classed LEGEND_DEPT_CLASS, true
+  legendSelection = svgSelection.append 'g'
+  .classed LEGEND_CLASS, true
 
-  legendSelection.append 'rect'
-  .classed LEGEND_COLOR_CLASS, true
+  selectionSelection.append 'text'
+  .classed SELECTION_DEPT_CLASS, true
+
+  selectionSelection.append 'rect'
+  .classed SELECTION_COLOR_CLASS, true
   .attr
     x: -15
     y: -15
     width: 8
     height: 20
 
-  legendSelection.append 'text'
+  selectionSelection.append 'text'
   .attr 'dy', '1.5em'
-  .classed LEGEND_VALUE_CLASS, true
+  .classed SELECTION_VALUE_CLASS, true
 
   lastSelection = undefined
-  _updateLegend = (newSelection) ->
+  _updateSelection = (newSelection) ->
     unless newSelection
-      legendSelection.select ".#{LEGEND_DEPT_CLASS}"
+      selectionSelection.select ".#{SELECTION_DEPT_CLASS}"
       .text 'Sélectionnez un département...'
 
-      legendSelection.select ".#{LEGEND_VALUE_CLASS}"
+      selectionSelection.select ".#{SELECTION_VALUE_CLASS}"
       .text ''
 
-      legendSelection.select ".#{LEGEND_COLOR_CLASS}"
+      selectionSelection.select ".#{SELECTION_COLOR_CLASS}"
       .style 'fill', 'transparent'
 
     else
-      legendSelection.select ".#{LEGEND_DEPT_CLASS}"
+      selectionSelection.select ".#{SELECTION_DEPT_CLASS}"
       .text newSelection.departementName
 
-      legendSelection.select ".#{LEGEND_VALUE_CLASS}"
-      .text percentageFormatter newSelection.value
+      selectionSelection.select ".#{SELECTION_VALUE_CLASS}"
+      .text "#{percentageFormatter newSelection.value} #{config.valueText}"
 
-      legendSelection.select ".#{LEGEND_COLOR_CLASS}"
+      selectionSelection.select ".#{SELECTION_COLOR_CLASS}"
       .style 'fill', newSelection.color
 
     lastSelection = newSelection
 
-  _updateLegend()
+  _updateSelection()
 
   projection = d3.geo.conicConformal()
   .center [2.454071, 47.279229]
@@ -143,16 +148,57 @@ DepartementsMap = (DOMElement, config) ->
 
   _computeScale = (data) ->
     accentColor = d3.rgb 234, 46, 46
-    baseColor = d3.rgb 'gray'
+    baseColor = d3.rgb '#4c4c4c'
 
-    d3.scale.linear()
-      .domain d3.extent _.map data, config.value
+    colorInterpolator = d3.scale.linear()
+      .domain [0, 3]
       .range [baseColor, accentColor]
+
+    dataExtent = d3.extent _.map data, config.value
+    colorScale = d3.scale.quantile()
+      .domain d3.extent _.map data, config.value
+      .range _.map d3.range(4), colorInterpolator
+
+    colorRects = legendSelection.selectAll 'rect'
+    .data _.zip colorScale.domain(), colorScale.range()
+
+    colorRects.enter()
+    .append 'rect'
+    .attr 'x', (d, i) -> i * 70
+    .attr 'width', 70
+    .attr 'height', 4
+
+    colorRects
+    .attr 'fill', (d) -> d[1].toString()
+
+    colorRects.exit().remove()
+
+    thresholdsData = _.concat dataExtent[0], colorScale.quantiles(), dataExtent[1]
+    thresholds = legendSelection.selectAll 'text'
+    .data thresholdsData
+
+    thresholds.enter()
+    .append 'text'
+    .attr 'x', (d, i) -> i * 70
+    .attr 'y', 8
+    .attr 'dy', '1em'
+    .style 'text-anchor', 'middle'
+
+    thresholds
+    .text (d) -> percentageFormatter d
+
+    thresholds.exit().remove()
+
+    legendSelection
+    .attr 'transform', "translate(#{($(DOMElement).width() - margins.right - thresholdsData.length / 2 * 70 )/ 2}, #{$(DOMElement).height() - margins.bottom})"
+
+    colorScale
 
   _hasData = (d) -> d.data?
 
   departementsMap = (data) ->
-    data = _.filter data, (d) -> _.includes departementList, config.departement d
+    data = _.filter data, (d) ->
+      _.includes departementList, config.departement d
     scale = _computeScale data
 
     colorAccessor = (d) ->
@@ -167,7 +213,7 @@ DepartementsMap = (DOMElement, config) ->
         d.properties.CODE_DEPT is config.departement dd
     .classed MISSING_CLASS, (d) -> not _hasData d
     .style 'fill', colorAccessor
-    .on 'click', (d) -> _updateLegend
+    .on 'click', (d) -> _updateSelection
       departement: config.departement d.data
       departementName: d.properties.NOM_DEPT
       value: config.value d.data
@@ -180,8 +226,8 @@ DepartementsMap = (DOMElement, config) ->
       if newSelection and config.value newSelection
         lastSelection.value = config.value newSelection
         lastSelection.color = colorAccessor data: newSelection
-        _updateLegend lastSelection
-      else _updateLegend()
+        _updateSelection lastSelection
+      else _updateSelection()
 
 
 window.DepartementsMap = DepartementsMap

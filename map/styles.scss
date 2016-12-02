@@ -10,10 +10,6 @@ $legend-color: $missing-color;
   height: 600px;
 }
 
-.departements-map__legend-bg {
-  fill: $legend-color;
-}
-
 .departements-map__feature {
   stroke: $stroke-color;
   stroke-width: 1px;

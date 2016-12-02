@@ -566,6 +566,7 @@ function loadMap() {
         svgSelection.node(), {
           departement: function(d){ return d.departement },
           value: function(d){ return d.value },
+          valueText: 'des répondants'
         }
       );
 
