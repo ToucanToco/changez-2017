@@ -18,6 +18,11 @@ $legend-color: $missing-color;
   stroke: $stroke-color;
   stroke-width: 1px;
   fill: $missing-color;
+  cursor: pointer;
+}
+
+.departements-map__feature,
+.departements-map__legend-color {
   transition: fill 1s;
 }
 
@@ -26,4 +31,5 @@ $legend-color: $missing-color;
 }
 
 .departements-map__feature--missing {
+  cursor: default;
 }

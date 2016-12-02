@@ -1,10 +1,13 @@
 ---
 ---
 
-$positive-color: green;
-$negative-color: red;
+$positive-color: #2f5587;
+$negative-color: #dc1d13;
 
-$divider-color: gray;
+$divider-color: #dbd9db;
+
+$quite-positive-color: mix($positive-color, $divider-color);
+$quite-negative-color: mix($negative-color, $divider-color);
 
 #yes-no {
   width: 800px;
@@ -31,11 +34,11 @@ $divider-color: gray;
 }
 
 .yes-no__group[data-sentiment="quite-positive"] .yes-no__bar {
-  fill: blue;
+  fill: $quite-positive-color;
 }
 
 .yes-no__group[data-sentiment="quite-negative"] .yes-no__bar {
-  fill: orange;
+  fill: $quite-negative-color;
 }
 
 .yes-no__group[data-sentiment="very-negative"] .yes-no__bar {

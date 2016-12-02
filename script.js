@@ -3,6 +3,7 @@ var sectionSelector = undefined;
 var svgSelection = undefined;
 var currentQuestion = undefined;
 var currentQuestionIndex = 0;
+var departementsMap = undefined;
 
 var all_data = 'change2017_full-extract_clean.csv';
 var currentDataName = 'question0';
@@ -28,7 +29,7 @@ var chartConfig = {
 function updateWordCloud(data, clear, label, value) {
 
   if (!!clear) {
-    d3.selectAll(".chart *").remove();
+    d3.selectAll(".chart > *").remove();
   }
   if (!value) {
     value = 'value';
@@ -113,7 +114,7 @@ function updateWordCloud(data, clear, label, value) {
 
 var updateYesNoChart = function(data, clear) {
   if (!!clear) {
-    d3.select(".chart > *").remove();
+    d3.selectAll(".chart > *").remove();
   }
 
   var svgSelection = d3
@@ -170,7 +171,7 @@ var updateBarChart = function(data, clear, label, value) {
     .range([0, chartConfig.width]);
 
   if (!!clear) {
-    d3.select(".chart > *").remove();
+    d3.selectAll(".chart > *").remove();
   }
 
   var svgSelection = d3
@@ -401,7 +402,7 @@ var updateMultiBarChart = function(data, group, label, value) {
 function updateChartType(data, type, clear) {
   if (type == 'leaderboard') {
     updateBarChart(data, clear);
-  } else if(type == 'yes-no') {
+  } else if (type == 'yes-no') {
     updateYesNoChart(data, clear);
   } else {
     updateWordCloud(data, clear);
@@ -442,6 +443,21 @@ function filterDataBy(segment, segmentSelector) {
 
   updateChartType(filtered, currentQuestion.type)
   // updateBarChart(filtered);
+}
+
+function filterMapBy(column, value) {
+  d3.selectAll('.segment')
+    .classed('selected', false)
+    .filter(function() {
+      return value == d3.select(this).text()
+    })
+    .classed('selected', true);
+
+  filtered = totalData.filter(function(d) {
+    return d[column] == value;
+  });
+
+  departementsMap(filtered);
 }
 
 function chooseSegment(data, group) {
@@ -521,6 +537,40 @@ function segmentBy(category) {
       // updateMultiBarChart(data, category);
     });
   // Update
+}
+
+function loadMap() {
+  toggleMenu(false);
+  console.log('Loading map');
+  d3.select('.intro').classed('u-hidden', true);
+  d3.select(".chart-section").classed("u-hidden", true);
+  d3.select(".chart-section.chart-section--map").classed("u-hidden", false);
+
+  d3.selectAll(".chart *").remove();
+
+  d3.csv('question0-cause.csv')
+    .row(function(d) { return {answer: d.answer, value: +d.value, departement: d.departement}; })
+    .get(function(error, data) {
+      if (error) {
+        console.error(error);
+      };
+
+      totalData = data;
+
+      var svgSelection = d3
+        .select(".chart")
+        .attr('width', chartConfig.width)
+        .attr('height', chartConfig.height);
+
+      departementsMap = DepartementsMap(
+        svgSelection.node(), {
+          departement: function(d){ return d.departement },
+          value: function(d){ return d.value },
+        }
+      );
+
+      filterMapBy('answer', 'La défense des droits humains');
+    });
 }
 
 function loadQuestion(indexQuestion) {

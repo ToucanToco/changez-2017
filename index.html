@@ -7,15 +7,26 @@
   <title>D3 Dataviz</title>
   <link type="text/css" rel="stylesheet" href="styles.css">
   <link type="text/css" rel="stylesheet" href="yes-no/styles.css">
+  <link type="text/css" rel="stylesheet" href="map/styles.css">
 </head>
 
 <body>
   <div class="title">Data For Good X Change.org</div>
   <nav class="nav-menu">
     <div class="toggle-menu-handle" onclick="toggleMenu()">MENU</div>
-    <h2>Toutes les questions</h2>
-    <ul class="menu-question-list">
-    </ul>
+
+    <div class="menu-content">
+      <h3>Highlights</h3>
+      <ul class="menu-list menu-highlights-list">
+        <li><div class="menu-question-theme--label menu-question-item" onclick="loadMap()">
+          L'importance des causes par département
+        </div></li>
+      </ul>
+
+      <h3>Toutes les questions</h3>
+      <ul class="menu-list menu-question-list">
+      </ul>
+    </div>
 
   </nav>
   <div class="menu-overlay" onclick="toggleMenu(false)"></div>
@@ -69,6 +80,20 @@
 
     </div>
 
+    <div class="chart-section chart-section--map">
+      <h2 class="question-label">Où se préoccupe-t-on le plus de... ?</h2>
+      <div class="segment-container" style="height: 75px;">
+        <div class="segment-controls" style="line-height: 45px;">
+          <span class="segment" onclick="filterMapBy('answer', 'La défense des droits humains')">La défense des droits humains</span>
+          <span class="segment" onclick="filterMapBy('answer', 'La justice sociale')">La justice sociale</span>
+          <span class="segment" onclick="filterMapBy('answer', 'La protection de l\'environnement')">La protection de l'environnement</span>
+          <span class="segment" onclick="filterMapBy('answer', 'L’emploi')">L’emploi</span>
+          <span class="segment" onclick="filterMapBy('answer', 'L’éducation')">L’éducation</span>
+        </div>
+      </div>
+
+    </div>
+
     <div class="chart-container">
       <svg class="chart"></svg>
     </div>
@@ -83,6 +108,7 @@
   <script src="d3.layout.cloud.js"></script>
   <script src="constants.js"></script>
   <script src="yes-no/yes-no.js"></script>
+  <script src="map/map.js"></script>
   <script src="script.js"></script>
 
 </body>
