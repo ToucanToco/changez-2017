@@ -1,0 +1,219 @@
+,profession,answer,count,total,value
+0,Agriculteurs exploitants,La défense des droits humains,35,308,0.113636363636
+1,Agriculteurs exploitants,La justice sociale,44,308,0.142857142857
+2,Agriculteurs exploitants,La liberté de la presse et d’expression,2,308,0.00649350649351
+3,Agriculteurs exploitants,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",2,308,0.00649350649351
+4,Agriculteurs exploitants,La politique étrangère,1,308,0.00324675324675
+5,Agriculteurs exploitants,La protection de l'environnement,51,308,0.165584415584
+6,Agriculteurs exploitants,La santé,2,308,0.00649350649351
+7,Agriculteurs exploitants,"La sécurité, le terrorisme",11,308,0.0357142857143
+8,Agriculteurs exploitants,La transparence en politique,23,308,0.0746753246753
+9,Agriculteurs exploitants,Le logement,1,308,0.00324675324675
+10,Agriculteurs exploitants,Le vivre ensemble,14,308,0.0454545454545
+11,Agriculteurs exploitants,Les droits des animaux,8,308,0.025974025974
+12,Agriculteurs exploitants,Les droits des femmes,4,308,0.012987012987
+13,Agriculteurs exploitants,Les droits des personnes LGBT,3,308,0.00974025974026
+14,Agriculteurs exploitants,L’accueil des migrants,5,308,0.0162337662338
+15,Agriculteurs exploitants,L’emploi,28,308,0.0909090909091
+16,Agriculteurs exploitants,L’économie,61,308,0.198051948052
+17,Agriculteurs exploitants,L’éducation,13,308,0.0422077922078
+18,"Artisans, commerçants et chefs d’entreprise",La défense des droits humains,178,2670,0.0666666666667
+19,"Artisans, commerçants et chefs d’entreprise",La justice sociale,317,2670,0.11872659176
+20,"Artisans, commerçants et chefs d’entreprise",La liberté de la presse et d’expression,18,2670,0.00674157303371
+21,"Artisans, commerçants et chefs d’entreprise","La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",35,2670,0.0131086142322
+22,"Artisans, commerçants et chefs d’entreprise",La politique étrangère,32,2670,0.0119850187266
+23,"Artisans, commerçants et chefs d’entreprise",La protection de l'environnement,288,2670,0.107865168539
+24,"Artisans, commerçants et chefs d’entreprise",La religion,13,2670,0.00486891385768
+25,"Artisans, commerçants et chefs d’entreprise",La santé,19,2670,0.00711610486891
+26,"Artisans, commerçants et chefs d’entreprise","La sécurité, le terrorisme",154,2670,0.0576779026217
+27,"Artisans, commerçants et chefs d’entreprise",La transparence en politique,234,2670,0.0876404494382
+28,"Artisans, commerçants et chefs d’entreprise",Le handicap,10,2670,0.00374531835206
+29,"Artisans, commerçants et chefs d’entreprise",Le logement,17,2670,0.0063670411985
+30,"Artisans, commerçants et chefs d’entreprise",Le vivre ensemble,122,2670,0.0456928838951
+31,"Artisans, commerçants et chefs d’entreprise",Les droits des animaux,88,2670,0.0329588014981
+32,"Artisans, commerçants et chefs d’entreprise",Les droits des femmes,20,2670,0.00749063670412
+33,"Artisans, commerçants et chefs d’entreprise",Les droits des personnes LGBT,15,2670,0.00561797752809
+34,"Artisans, commerçants et chefs d’entreprise",L’accueil des migrants,54,2670,0.0202247191011
+35,"Artisans, commerçants et chefs d’entreprise",L’emploi,295,2670,0.110486891386
+36,"Artisans, commerçants et chefs d’entreprise",L’économie,542,2670,0.202996254682
+37,"Artisans, commerçants et chefs d’entreprise",L’éducation,219,2670,0.0820224719101
+38,Autre,La défense des droits humains,824,8950,0.0920670391061
+39,Autre,La justice sociale,1566,8950,0.174972067039
+40,Autre,La liberté de la presse et d’expression,66,8950,0.00737430167598
+41,Autre,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",156,8950,0.0174301675978
+42,Autre,La politique étrangère,67,8950,0.00748603351955
+43,Autre,La protection de l'environnement,731,8950,0.0816759776536
+44,Autre,La religion,34,8950,0.00379888268156
+45,Autre,La santé,108,8950,0.0120670391061
+46,Autre,"La sécurité, le terrorisme",595,8950,0.0664804469274
+47,Autre,La transparence en politique,693,8950,0.0774301675978
+48,Autre,Le handicap,83,8950,0.00927374301676
+49,Autre,Le logement,35,8950,0.00391061452514
+50,Autre,Le vivre ensemble,398,8950,0.044469273743
+51,Autre,Les droits des animaux,331,8950,0.0369832402235
+52,Autre,Les droits des femmes,111,8950,0.0124022346369
+53,Autre,Les droits des personnes LGBT,35,8950,0.00391061452514
+54,Autre,L’accueil des migrants,215,8950,0.0240223463687
+55,Autre,L’emploi,1194,8950,0.133407821229
+56,Autre,L’économie,995,8950,0.111173184358
+57,Autre,L’éducation,713,8950,0.0796648044693
+58,Cadres et professions intellectuelles supérieures,La défense des droits humains,739,10170,0.0726647000983
+59,Cadres et professions intellectuelles supérieures,La justice sociale,1470,10170,0.144542772861
+60,Cadres et professions intellectuelles supérieures,La liberté de la presse et d’expression,50,10170,0.00491642084562
+61,Cadres et professions intellectuelles supérieures,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",188,10170,0.0184857423795
+62,Cadres et professions intellectuelles supérieures,La politique étrangère,134,10170,0.0131760078663
+63,Cadres et professions intellectuelles supérieures,La protection de l'environnement,1311,10170,0.128908554572
+64,Cadres et professions intellectuelles supérieures,La religion,44,10170,0.00432645034415
+65,Cadres et professions intellectuelles supérieures,La santé,81,10170,0.00796460176991
+66,Cadres et professions intellectuelles supérieures,"La sécurité, le terrorisme",369,10170,0.0362831858407
+67,Cadres et professions intellectuelles supérieures,La transparence en politique,679,10170,0.0667649950836
+68,Cadres et professions intellectuelles supérieures,Le handicap,25,10170,0.00245821042281
+69,Cadres et professions intellectuelles supérieures,Le logement,33,10170,0.00324483775811
+70,Cadres et professions intellectuelles supérieures,Le vivre ensemble,695,10170,0.0683382497542
+71,Cadres et professions intellectuelles supérieures,Les droits des animaux,222,10170,0.0218289085546
+72,Cadres et professions intellectuelles supérieures,Les droits des femmes,105,10170,0.0103244837758
+73,Cadres et professions intellectuelles supérieures,Les droits des personnes LGBT,43,10170,0.00422812192724
+74,Cadres et professions intellectuelles supérieures,L’accueil des migrants,177,10170,0.0174041297935
+75,Cadres et professions intellectuelles supérieures,L’emploi,1162,10170,0.114257620452
+76,Cadres et professions intellectuelles supérieures,L’économie,1479,10170,0.145427728614
+77,Cadres et professions intellectuelles supérieures,L’éducation,1164,10170,0.114454277286
+78,Employés,La défense des droits humains,653,6931,0.0942143990766
+79,Employés,La justice sociale,1027,6931,0.148174866542
+80,Employés,La liberté de la presse et d’expression,32,6931,0.00461693839273
+81,Employés,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",138,6931,0.0199105468186
+82,Employés,La politique étrangère,47,6931,0.00678112826432
+83,Employés,La protection de l'environnement,752,6931,0.108498052229
+84,Employés,La religion,29,6931,0.00418410041841
+85,Employés,La santé,95,6931,0.0137065358534
+86,Employés,"La sécurité, le terrorisme",410,6931,0.0591545231568
+87,Employés,La transparence en politique,492,6931,0.0709854277882
+88,Employés,Le handicap,37,6931,0.00533833501659
+89,Employés,Le logement,40,6931,0.00577117299091
+90,Employés,Le vivre ensemble,403,6931,0.0581445678834
+91,Employés,Les droits des animaux,345,6931,0.0497763670466
+92,Employés,Les droits des femmes,70,6931,0.0100995527341
+93,Employés,Les droits des personnes LGBT,43,6931,0.00620401096523
+94,Employés,L’accueil des migrants,166,6931,0.0239503679123
+95,Employés,L’emploi,1060,6931,0.152936084259
+96,Employés,L’économie,667,6931,0.0962343096234
+97,Employés,L’éducation,425,6931,0.0613187130284
+98,Etudiant,La défense des droits humains,407,3489,0.116652335913
+99,Etudiant,La justice sociale,354,3489,0.101461736887
+100,Etudiant,La liberté de la presse et d’expression,17,3489,0.0048724562912
+101,Etudiant,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",178,3489,0.0510174835196
+102,Etudiant,La politique étrangère,51,3489,0.0146173688736
+103,Etudiant,La protection de l'environnement,491,3489,0.140728002293
+104,Etudiant,La religion,21,3489,0.00601891659501
+105,Etudiant,La santé,31,3489,0.00888506735454
+106,Etudiant,"La sécurité, le terrorisme",119,3489,0.0341071940384
+107,Etudiant,La transparence en politique,198,3489,0.0567497850387
+108,Etudiant,Le handicap,12,3489,0.00343938091144
+109,Etudiant,Le logement,10,3489,0.00286615075953
+110,Etudiant,Le vivre ensemble,283,3489,0.0811120664947
+111,Etudiant,Les droits des animaux,87,3489,0.0249355116079
+112,Etudiant,Les droits des femmes,108,3489,0.0309544282029
+113,Etudiant,Les droits des personnes LGBT,54,3489,0.0154772141015
+114,Etudiant,L’accueil des migrants,142,3489,0.0406993407853
+115,Etudiant,L’emploi,231,3489,0.0662080825451
+116,Etudiant,L’économie,342,3489,0.0980223559759
+117,Etudiant,L’éducation,353,3489,0.101175121811
+118,Je préfère ne pas répondre,La défense des droits humains,178,1906,0.093389296957
+119,Je préfère ne pas répondre,La justice sociale,256,1906,0.134312696747
+120,Je préfère ne pas répondre,La liberté de la presse et d’expression,18,1906,0.00944386149003
+121,Je préfère ne pas répondre,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",41,1906,0.0215110178384
+122,Je préfère ne pas répondre,La politique étrangère,31,1906,0.0162644281217
+123,Je préfère ne pas répondre,La protection de l'environnement,199,1906,0.104407135362
+124,Je préfère ne pas répondre,La religion,10,1906,0.00524658971668
+125,Je préfère ne pas répondre,La santé,26,1906,0.0136411332634
+126,Je préfère ne pas répondre,"La sécurité, le terrorisme",109,1906,0.0571878279119
+127,Je préfère ne pas répondre,La transparence en politique,137,1906,0.0718782791186
+128,Je préfère ne pas répondre,Le handicap,21,1906,0.011017838405
+129,Je préfère ne pas répondre,Le logement,13,1906,0.00682056663169
+130,Je préfère ne pas répondre,Le vivre ensemble,110,1906,0.0577124868835
+131,Je préfère ne pas répondre,Les droits des animaux,98,1906,0.0514165792235
+132,Je préfère ne pas répondre,Les droits des femmes,33,1906,0.0173137460651
+133,Je préfère ne pas répondre,Les droits des personnes LGBT,12,1906,0.00629590766002
+134,Je préfère ne pas répondre,L’accueil des migrants,50,1906,0.0262329485834
+135,Je préfère ne pas répondre,L’emploi,218,1906,0.114375655824
+136,Je préfère ne pas répondre,L’économie,194,1906,0.101783840504
+137,Je préfère ne pas répondre,L’éducation,152,1906,0.0797481636936
+138,Lycéen,La défense des droits humains,130,961,0.135275754422
+139,Lycéen,La justice sociale,49,961,0.05098855359
+140,Lycéen,La liberté de la presse et d’expression,9,961,0.00936524453694
+141,Lycéen,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",85,961,0.0884495317378
+142,Lycéen,La politique étrangère,16,961,0.0166493236212
+143,Lycéen,La protection de l'environnement,80,961,0.0832466181061
+144,Lycéen,La religion,12,961,0.0124869927159
+145,Lycéen,La santé,2,961,0.00208116545265
+146,Lycéen,"La sécurité, le terrorisme",61,961,0.0634755463059
+147,Lycéen,La transparence en politique,35,961,0.0364203954214
+148,Lycéen,Le handicap,4,961,0.00416233090531
+149,Lycéen,Le logement,5,961,0.00520291363163
+150,Lycéen,Le vivre ensemble,44,961,0.0457856399584
+151,Lycéen,Les droits des animaux,57,961,0.0593132154006
+152,Lycéen,Les droits des femmes,52,961,0.054110301769
+153,Lycéen,Les droits des personnes LGBT,29,961,0.0301768990635
+154,Lycéen,L’accueil des migrants,46,961,0.047866805411
+155,Lycéen,L’emploi,71,961,0.0738813735692
+156,Lycéen,L’économie,85,961,0.0884495317378
+157,Lycéen,L’éducation,89,961,0.0926118626431
+158,Ouvriers,La défense des droits humains,115,1215,0.0946502057613
+159,Ouvriers,La justice sociale,211,1215,0.17366255144
+160,Ouvriers,La liberté de la presse et d’expression,9,1215,0.00740740740741
+161,Ouvriers,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",21,1215,0.0172839506173
+162,Ouvriers,La politique étrangère,15,1215,0.0123456790123
+163,Ouvriers,La protection de l'environnement,79,1215,0.0650205761317
+164,Ouvriers,La religion,5,1215,0.00411522633745
+165,Ouvriers,La santé,12,1215,0.00987654320988
+166,Ouvriers,"La sécurité, le terrorisme",74,1215,0.0609053497942
+167,Ouvriers,La transparence en politique,108,1215,0.0888888888889
+168,Ouvriers,Le handicap,9,1215,0.00740740740741
+169,Ouvriers,Le logement,8,1215,0.00658436213992
+170,Ouvriers,Le vivre ensemble,55,1215,0.0452674897119
+171,Ouvriers,Les droits des animaux,35,1215,0.0288065843621
+172,Ouvriers,Les droits des femmes,10,1215,0.0082304526749
+173,Ouvriers,Les droits des personnes LGBT,3,1215,0.00246913580247
+174,Ouvriers,L’accueil des migrants,28,1215,0.0230452674897
+175,Ouvriers,L’emploi,227,1215,0.18683127572
+176,Ouvriers,L’économie,133,1215,0.109465020576
+177,Ouvriers,L’éducation,58,1215,0.0477366255144
+178,Professions Intermédiaires,La défense des droits humains,323,3674,0.087915078933
+179,Professions Intermédiaires,La justice sociale,674,3674,0.18345127926
+180,Professions Intermédiaires,La liberté de la presse et d’expression,19,3674,0.00517147523136
+181,Professions Intermédiaires,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",62,3674,0.0168753402286
+182,Professions Intermédiaires,La politique étrangère,26,3674,0.00707675557975
+183,Professions Intermédiaires,La protection de l'environnement,458,3674,0.124659771366
+184,Professions Intermédiaires,La religion,11,3674,0.00299401197605
+185,Professions Intermédiaires,La santé,50,3674,0.0136091453457
+186,Professions Intermédiaires,"La sécurité, le terrorisme",151,3674,0.0410996189439
+187,Professions Intermédiaires,La transparence en politique,246,3674,0.0669569951007
+188,Professions Intermédiaires,Le handicap,11,3674,0.00299401197605
+189,Professions Intermédiaires,Le logement,14,3674,0.00381056069679
+190,Professions Intermédiaires,Le vivre ensemble,244,3674,0.0664126292869
+191,Professions Intermédiaires,Les droits des animaux,106,3674,0.0288513881328
+192,Professions Intermédiaires,Les droits des femmes,32,3674,0.00870985302123
+193,Professions Intermédiaires,Les droits des personnes LGBT,16,3674,0.00435492651062
+194,Professions Intermédiaires,L’accueil des migrants,77,3674,0.0209580838323
+195,Professions Intermédiaires,L’emploi,447,3674,0.12166575939
+196,Professions Intermédiaires,L’économie,375,3674,0.102068590093
+197,Professions Intermédiaires,L’éducation,332,3674,0.0903647250953
+198,Sans emploi,La défense des droits humains,255,2685,0.0949720670391
+199,Sans emploi,La justice sociale,353,2685,0.13147113594
+200,Sans emploi,La liberté de la presse et d’expression,20,2685,0.00744878957169
+201,Sans emploi,"La lutte contre le racisme, l’islamophobie, l’antisémitisme, la xénophobie",57,2685,0.0212290502793
+202,Sans emploi,La politique étrangère,21,2685,0.00782122905028
+203,Sans emploi,La protection de l'environnement,255,2685,0.0949720670391
+204,Sans emploi,La religion,11,2685,0.00409683426443
+205,Sans emploi,La santé,14,2685,0.00521415270019
+206,Sans emploi,"La sécurité, le terrorisme",143,2685,0.0532588454376
+207,Sans emploi,La transparence en politique,189,2685,0.0703910614525
+208,Sans emploi,Le handicap,39,2685,0.0145251396648
+209,Sans emploi,Le logement,26,2685,0.0096834264432
+210,Sans emploi,Le vivre ensemble,121,2685,0.0450651769088
+211,Sans emploi,Les droits des animaux,149,2685,0.0554934823091
+212,Sans emploi,Les droits des femmes,42,2685,0.0156424581006
+213,Sans emploi,Les droits des personnes LGBT,25,2685,0.00931098696462
+214,Sans emploi,L’accueil des migrants,79,2685,0.0294227188082
+215,Sans emploi,L’emploi,474,2685,0.176536312849
+216,Sans emploi,L’économie,229,2685,0.0852886405959
+217,Sans emploi,L’éducation,183,2685,0.068156424581

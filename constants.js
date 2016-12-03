@@ -9,6 +9,7 @@ var SEGMENTS = [
   {id: 'tendance', label: 'Par tendance politique', question: 'A quelle tendance politique vous identifiez-vous ?'},
   {id: 'taille_commune', label: 'Par taille de commune', question: 'Quelle est la taille de votre commune ?'},
   {id: 'revenu', label: 'Par revenu', question: 'Quelle est votre tranche de revenu annuel ?'},
+  {id: 'profession', label: 'Par profession', question: 'Quelle est votre profession ?'},
 ]
 
 var QUESTIONS = [

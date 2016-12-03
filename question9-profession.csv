@@ -1,0 +1,23 @@
+,profession,answer,count,total,value
+0,Agriculteurs exploitants,non,26,308,0.0844155844156
+1,Agriculteurs exploitants,oui,282,308,0.915584415584
+2,"Artisans, commerçants et chefs d’entreprise",non,187,2670,0.0700374531835
+3,"Artisans, commerçants et chefs d’entreprise",oui,2483,2670,0.929962546816
+4,Autre,non,1238,8950,0.138324022346
+5,Autre,oui,7712,8950,0.861675977654
+6,Cadres et professions intellectuelles supérieures,non,1019,10170,0.100196656834
+7,Cadres et professions intellectuelles supérieures,oui,9151,10170,0.899803343166
+8,Employés,non,623,6931,0.0898860193334
+9,Employés,oui,6308,6931,0.910113980667
+10,Etudiant,non,265,3489,0.0759529951275
+11,Etudiant,oui,3224,3489,0.924047004872
+12,Je préfère ne pas répondre,non,219,1906,0.114900314795
+13,Je préfère ne pas répondre,oui,1687,1906,0.885099685205
+14,Lycéen,non,120,961,0.124869927159
+15,Lycéen,oui,841,961,0.875130072841
+16,Ouvriers,non,157,1215,0.129218106996
+17,Ouvriers,oui,1058,1215,0.870781893004
+18,Professions Intermédiaires,non,344,3674,0.0936309199782
+19,Professions Intermédiaires,oui,3330,3674,0.906369080022
+20,Sans emploi,non,256,2685,0.0953445065177
+21,Sans emploi,oui,2429,2685,0.904655493482

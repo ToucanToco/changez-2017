@@ -1,0 +1,45 @@
+,profession,answer,count,total,value
+0,Agriculteurs exploitants,Le charisme,28,308,0.0909090909091
+1,Agriculteurs exploitants,Le parti,4,308,0.012987012987
+2,Agriculteurs exploitants,Les propositions concrètes,259,308,0.840909090909
+3,Agriculteurs exploitants,L’expérience,17,308,0.0551948051948
+4,"Artisans, commerçants et chefs d’entreprise",Le charisme,154,2670,0.0576779026217
+5,"Artisans, commerçants et chefs d’entreprise",Le parti,16,2670,0.0059925093633
+6,"Artisans, commerçants et chefs d’entreprise",Les propositions concrètes,2378,2670,0.89063670412
+7,"Artisans, commerçants et chefs d’entreprise",L’expérience,122,2670,0.0456928838951
+8,Autre,Le charisme,538,8950,0.0601117318436
+9,Autre,Le parti,127,8950,0.0141899441341
+10,Autre,Les propositions concrètes,7871,8950,0.879441340782
+11,Autre,L’expérience,414,8950,0.0462569832402
+12,Cadres et professions intellectuelles supérieures,Le charisme,511,10170,0.0502458210423
+13,Cadres et professions intellectuelles supérieures,Le parti,105,10170,0.0103244837758
+14,Cadres et professions intellectuelles supérieures,Les propositions concrètes,9063,10170,0.891150442478
+15,Cadres et professions intellectuelles supérieures,L’expérience,491,10170,0.048279252704
+16,Employés,Le charisme,230,6931,0.0331842446977
+17,Employés,Le parti,102,6931,0.0147164911268
+18,Employés,Les propositions concrètes,6413,6931,0.925263309768
+19,Employés,L’expérience,186,6931,0.0268359544077
+20,Etudiant,Le charisme,112,3489,0.0321008885067
+21,Etudiant,Le parti,62,3489,0.0177701347091
+22,Etudiant,Les propositions concrètes,3201,3489,0.917454858126
+23,Etudiant,L’expérience,114,3489,0.0326741186586
+24,Je préfère ne pas répondre,Le charisme,76,1906,0.0398740818468
+25,Je préfère ne pas répondre,Le parti,52,1906,0.0272822665268
+26,Je préfère ne pas répondre,Les propositions concrètes,1679,1906,0.880902413431
+27,Je préfère ne pas répondre,L’expérience,99,1906,0.0519412381952
+28,Lycéen,Le charisme,41,961,0.0426638917794
+29,Lycéen,Le parti,27,961,0.0280957336108
+30,Lycéen,Les propositions concrètes,865,961,0.900104058273
+31,Lycéen,L’expérience,28,961,0.0291363163371
+32,Ouvriers,Le charisme,44,1215,0.0362139917695
+33,Ouvriers,Le parti,33,1215,0.0271604938272
+34,Ouvriers,Les propositions concrètes,1094,1215,0.900411522634
+35,Ouvriers,L’expérience,44,1215,0.0362139917695
+36,Professions Intermédiaires,Le charisme,158,3674,0.0430048992923
+37,Professions Intermédiaires,Le parti,39,3674,0.0106151333696
+38,Professions Intermédiaires,Les propositions concrètes,3351,3674,0.912084921067
+39,Professions Intermédiaires,L’expérience,126,3674,0.0342950462711
+40,Sans emploi,Le charisme,99,2685,0.0368715083799
+41,Sans emploi,Le parti,39,2685,0.0145251396648
+42,Sans emploi,Les propositions concrètes,2445,2685,0.91061452514
+43,Sans emploi,L’expérience,102,2685,0.0379888268156

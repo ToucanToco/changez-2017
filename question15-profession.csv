@@ -1,0 +1,45 @@
+,profession,answer,count,total,value
+0,Agriculteurs exploitants,Non pas du tout,17,308,0.0551948051948
+1,Agriculteurs exploitants,Non pas vraiment,35,308,0.113636363636
+2,Agriculteurs exploitants,Oui plutôt,135,308,0.438311688312
+3,Agriculteurs exploitants,Oui tout à fait,121,308,0.392857142857
+4,"Artisans, commerçants et chefs d’entreprise",Non pas du tout,68,2670,0.025468164794
+5,"Artisans, commerçants et chefs d’entreprise",Non pas vraiment,234,2670,0.0876404494382
+6,"Artisans, commerçants et chefs d’entreprise",Oui plutôt,1033,2670,0.386891385768
+7,"Artisans, commerçants et chefs d’entreprise",Oui tout à fait,1335,2670,0.5
+8,Autre,Non pas du tout,179,8950,0.02
+9,Autre,Non pas vraiment,736,8950,0.0822346368715
+10,Autre,Oui plutôt,3381,8950,0.377765363128
+11,Autre,Oui tout à fait,4654,8950,0.52
+12,Cadres et professions intellectuelles supérieures,Non pas du tout,317,10170,0.0311701081613
+13,Cadres et professions intellectuelles supérieures,Non pas vraiment,1121,10170,0.110226155359
+14,Cadres et professions intellectuelles supérieures,Oui plutôt,4218,10170,0.414749262537
+15,Cadres et professions intellectuelles supérieures,Oui tout à fait,4514,10170,0.443854473943
+16,Employés,Non pas du tout,86,6931,0.0124080219305
+17,Employés,Non pas vraiment,413,6931,0.0595873611311
+18,Employés,Oui plutôt,2361,6931,0.340643485788
+19,Employés,Oui tout à fait,4071,6931,0.58736113115
+20,Etudiant,Non pas du tout,93,3489,0.0266552020636
+21,Etudiant,Non pas vraiment,447,3489,0.128116938951
+22,Etudiant,Oui plutôt,1231,3489,0.352823158498
+23,Etudiant,Oui tout à fait,1718,3489,0.492404700487
+24,Je préfère ne pas répondre,Non pas du tout,77,1906,0.0403987408185
+25,Je préfère ne pas répondre,Non pas vraiment,168,1906,0.0881427072403
+26,Je préfère ne pas répondre,Oui plutôt,655,1906,0.343651626443
+27,Je préfère ne pas répondre,Oui tout à fait,1006,1906,0.527806925498
+28,Lycéen,Non pas du tout,30,961,0.0312174817898
+29,Lycéen,Non pas vraiment,106,961,0.110301768991
+30,Lycéen,Oui plutôt,299,961,0.311134235172
+31,Lycéen,Oui tout à fait,526,961,0.547346514048
+32,Ouvriers,Non pas du tout,27,1215,0.0222222222222
+33,Ouvriers,Non pas vraiment,101,1215,0.0831275720165
+34,Ouvriers,Oui plutôt,399,1215,0.328395061728
+35,Ouvriers,Oui tout à fait,688,1215,0.566255144033
+36,Professions Intermédiaires,Non pas du tout,63,3674,0.0171475231355
+37,Professions Intermédiaires,Non pas vraiment,297,3674,0.0808383233533
+38,Professions Intermédiaires,Oui plutôt,1502,3674,0.408818726184
+39,Professions Intermédiaires,Oui tout à fait,1812,3674,0.493195427327
+40,Sans emploi,Non pas du tout,44,2685,0.0163873370577
+41,Sans emploi,Non pas vraiment,194,2685,0.0722532588454
+42,Sans emploi,Oui plutôt,865,2685,0.322160148976
+43,Sans emploi,Oui tout à fait,1582,2685,0.589199255121
