@@ -5,6 +5,7 @@ image: ruby:2.3
 test:
   stage: test
   script:
+  - apt-get install nodejs
   - gem install jekyll jekyll-coffeescript
   - jekyll build -d test
   artifacts:
