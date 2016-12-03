@@ -17,6 +17,7 @@ test:
 pages:
   stage: deploy
   script:
+  - apt-get install nodejs
   - gem install jekyll jekyll-coffeescript
   - jekyll build -d public
   artifacts:
