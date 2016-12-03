@@ -21,15 +21,114 @@ var QUESTIONS = [
   {id: 6, text:"Pensez-vous que les programmes politiques des candidats ou partis politiques : [permettraient d'améliorer la vie des Français ?]", type: "yes-no", theme: "programme"},
   {id: 7, text:"Selon vous, un candidat à l'élection présidentielle devrait :", type: "leaderboard", theme: "presidentielle"},
   {id: 8, text:"Préférez-vous voter pour : ", type: "leaderboard", theme: "presidentielle"},
-  {id: 9, text:"Seriez-vous prêt à voter pour un candidat indépendant?", type: "leaderboard", theme: "presidentielle"},
+  {id: 9, text:"Seriez-vous prêt à voter pour un candidat indépendant?", type: "yes-no", theme: "presidentielle", params: {
+    sentiments: [{
+      label: 'non',
+      sentiment: 'very-negative'
+    },{
+      label: 'oui',
+      sentiment: 'very-positive'
+    }],
+    divider: {before: 'oui'}
+  }},
   {id: 10, text:"Pour vous le plus important pour un candidat à la présidentielle c'est : ", type: "leaderboard", theme: "presidentielle"},
   {id: 11, text:"Si vous deviez décrire en 1 mot votre président(e) idéal(e) quel serait-il ?", type: "wordcloud", theme: "presidentielle"},
-  {id: 12, text:"Pensez-vous que nos présidents successifs ont su utiliser internet pour écouter l'opinion des Français ?", type: "yes-no", theme: "internet"},
-  {id: 13, text:"Dans le futur, pensez-vous que le/la président-e et son gouvernement devraient  : [Intégrer internet pour déterminer leur ligne politique]", type: "leaderboard", theme: "internet"},
-  {id: 14, text:"Dans le futur, pensez-vous que le/la président-e et son gouvernement devraient  : [Prendre en compte les pétitions en ligne dans le processus démocratique]", type: "leaderboard", theme: "internet"},
-  {id: 15, text:"Dans le futur, pensez-vous que le/la président-e et son gouvernement devraient  : [Prendre en compte les pétitions en ligne au même titre que les sondages d'opinion]", type: "leaderboard", theme: "internet"},
-  {id: 16, text:"Dans le futur, pensez-vous que le/la président-e et son gouvernement devraient  : [Faire en sorte que les plus populaires fassent l'objet de débats parlementaires]", type: "leaderboard", theme: "internet"},
-  {id: 17, text:"Dans le futur, pensez-vous que le/la président-e et son gouvernement devraient  : [Répondre directement aux pétitions en ligne]", type: "leaderboard", theme: "internet"},
+  {id: 12, text:"Pensez-vous que nos présidents successifs ont su utiliser internet pour écouter l'opinion des Français ?", type: "yes-no", theme: "internet", params: {
+    sentiments: [{
+      label: 'Non pas du tout',
+      sentiment: 'very-negative'
+    },{
+      label: 'Non pas vraiment',
+      sentiment: 'quite-negative'
+    },{
+      label: 'Oui plutôt',
+      sentiment: 'quite-positive'
+    },{
+      label: 'Oui tout à fait',
+      sentiment: 'very-positive'
+    }],
+    divider: {before: 'Oui plutôt'}
+  }},
+  {id: 13, text:"Dans le futur, pensez-vous que le/la président-e et son gouvernement devraient  : [Intégrer internet pour déterminer leur ligne politique]", type: "yes-no", theme: "internet", params: {
+    sentiments: [{
+      label: 'Non pas du tout',
+      sentiment: 'very-negative'
+    },{
+      label: 'Non pas vraiment',
+      sentiment: 'quite-negative'
+    },{
+      label: 'Oui plutôt',
+      sentiment: 'quite-positive'
+    },{
+      label: 'Oui tout à fait',
+      sentiment: 'very-positive'
+    }],
+    divider: {before: 'Oui plutôt'}
+  }},
+  {id: 14, text:"Dans le futur, pensez-vous que le/la président-e et son gouvernement devraient  : [Prendre en compte les pétitions en ligne dans le processus démocratique]", type: "yes-no", theme: "internet", params: {
+    sentiments: [{
+      label: 'Non pas du tout',
+      sentiment: 'very-negative'
+    },{
+      label: 'Non pas vraiment',
+      sentiment: 'quite-negative'
+    },{
+      label: 'Oui plutôt',
+      sentiment: 'quite-positive'
+    },{
+      label: 'Oui tout à fait',
+      sentiment: 'very-positive'
+    }],
+    divider: {before: 'Oui plutôt'}
+  }},
+  {id: 15, text:"Dans le futur, pensez-vous que le/la président-e et son gouvernement devraient  : [Prendre en compte les pétitions en ligne au même titre que les sondages d'opinion]", type: "yes-no", theme: "internet", params: {
+    sentiments: [{
+      label: 'Non pas du tout',
+      sentiment: 'very-negative'
+    },{
+      label: 'Non pas vraiment',
+      sentiment: 'quite-negative'
+    },{
+      label: 'Oui plutôt',
+      sentiment: 'quite-positive'
+    },{
+      label: 'Oui tout à fait',
+      sentiment: 'very-positive'
+    }],
+    divider: {before: 'Oui plutôt'}
+  }},
+  {id: 16, text:"Dans le futur, pensez-vous que le/la président-e et son gouvernement devraient  : [Faire en sorte que les plus populaires fassent l'objet de débats parlementaires]", type: "yes-no", theme: "internet", params: {
+    sentiments: [{
+      label: 'Non pas du tout',
+      sentiment: 'very-negative'
+    },{
+      label: 'Non pas vraiment',
+      sentiment: 'quite-negative'
+    },{
+      label: 'Oui plutôt',
+      sentiment: 'quite-positive'
+    },{
+      label: 'Oui tout à fait',
+      sentiment: 'very-positive'
+    }],
+    divider: {before: 'Oui plutôt'}
+  }},
+  {id: 17, text:"Dans le futur, pensez-vous que le/la président-e et son gouvernement devraient  : [Répondre directement aux pétitions en ligne]", type: "yes-no", theme: "internet", params: {
+    sentiments: [{
+      label: 'Non pas du tout',
+      sentiment: 'very-negative'
+    },{
+      label: 'Non pas vraiment',
+      sentiment: 'quite-negative'
+    },{
+      label: 'Oui plutôt',
+      sentiment: 'quite-positive'
+    },{
+      label: 'Oui tout à fait',
+      sentiment: 'very-positive'
+    }],
+    divider: {before: 'Oui plutôt'}
+  }},
 ]
 
 var THEMES = {

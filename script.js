@@ -112,18 +112,12 @@ function updateWordCloud(data, clear, label, value) {
   }
 }
 
-var updateYesNoChart = function(data, clear) {
+var yesNoChart = undefined;
+var updateYesNoChart = function(data, clear, params) {
   if (!!clear) {
     d3.selectAll(".chart > *").remove();
-  }
 
-  var svgSelection = d3
-    .select(".chart")
-    .attr('width', chartConfig.width)
-    .attr('height', chartConfig.height);
-
-  yesNoChart = YesNoChart(
-    svgSelection.node(), {
+    var config = {
       label: function(d){ return d.answer },
       value: function(d){ return d.value },
       sentiments: [{
@@ -140,8 +134,21 @@ var updateYesNoChart = function(data, clear) {
         sentiment: 'very-positive'
       }],
       divider: {before: 'Oui plutôt'}
+    };
+
+    if (params && params.sentiments) {
+      config = _.extend(config, params);
     }
-  );
+
+    var svgSelection = d3
+      .select(".chart")
+      .attr('width', chartConfig.width)
+      .attr('height', chartConfig.height);
+
+    yesNoChart = YesNoChart(
+      svgSelection.node(), config
+    );
+  }
 
   yesNoChart(data);
 }
@@ -399,11 +406,11 @@ var updateMultiBarChart = function(data, group, label, value) {
 
   selection.exit().remove();
 }
-function updateChartType(data, type, clear) {
+function updateChartType(data, type, clear, params) {
   if (type == 'leaderboard') {
     updateBarChart(data, clear);
   } else if (type == 'yes-no') {
-    updateYesNoChart(data, clear);
+    updateYesNoChart(data, clear, params);
   } else {
     updateWordCloud(data, clear);
   }
@@ -606,7 +613,7 @@ function loadQuestion(indexQuestion) {
       };
       // console.log(data);
       totalData = data;
-      updateChartType(data, currentQuestion.type, true)
+      updateChartType(data, currentQuestion.type, true, currentQuestion.params)
     });
 }
 

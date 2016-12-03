@@ -77,7 +77,6 @@ YesNoChart = (DOMElement, config) ->
 
     newGroups.append 'text'
     .classed VALUE_CLASS, true
-    .text (d) -> percentageFormatter d.value
     .attr 'y', 50 + barHeight + 20
 
     transitioningGroups = groups
@@ -87,6 +86,7 @@ YesNoChart = (DOMElement, config) ->
     transitioningGroups
     .select ".#{VALUE_CLASS}"
     .attr 'x', (d) -> scales.width d.value / 2
+    .text (d) -> percentageFormatter d.value
 
     transitioningGroups
     .select ".#{LABEL_CLASS}"
