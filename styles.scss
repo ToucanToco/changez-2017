@@ -45,7 +45,7 @@ html, body {
 }
 
 body {
-  font: 16px/1.5 "Open Sans", "Helvetica Neue", Helvetica, arial, sans-serif;
+  font: 16px/1.5 Change Calibre,Helvetica Neue,Helvetica,Arial,Tahoma,sans-serif;
   font-weight: 300;
   color: #202020;
   letter-spacing: 0.1px;
@@ -181,10 +181,35 @@ $menu-width--mobile: 85%;
   cursor: pointer;
   z-index:10;
 }
-.title {
+.branding {
   height: 40px;
   text-align: right;
-  width: 100%;
+  position: absolute;
+  right: 0;
+
+  img {
+    max-height: 40px;
+    max-width: 100px;
+    display: inline-block;
+  }
+
+  .credits {
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.5s;
+    width: auto;
+    font-size: 12px;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &:hover, &:focus {
+    .credits {
+      height: 60px;
+    }
+  }
 }
 
 .nav-menu.nav-menu--open {

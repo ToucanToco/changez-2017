@@ -145,7 +145,7 @@ DepartementsMap = (DOMElement, config) ->
 
   _computeScale = (data) ->
     accentColor = d3.rgb 234, 46, 46
-    baseColor = d3.rgb '#dddddd'
+    baseColor = d3.rgb '#ffe0e0'
 
     colorInterpolator = d3.scale.linear()
       .domain [0, 3]

@@ -5,13 +5,27 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>D3 Dataviz</title>
+  <link type="text/css" rel="stylesheet" href="boot.min.css">
   <link type="text/css" rel="stylesheet" href="styles.css">
   <link type="text/css" rel="stylesheet" href="yes-no/styles.css">
   <link type="text/css" rel="stylesheet" href="map/styles.css">
 </head>
 
 <body>
-  <div class="title">Data For Good X Change.org</div>
+  <div class="branding">
+    <img src="logo.png"></img>
+    <div class="credits">
+      <p>
+        Analyse des données: ...
+      </p>
+      <p>
+        Data visualisations: ...
+      </p>
+      <p>
+        En savoir plus sur <a href="http://www.dataforgood.fr">Data for Good</a>
+      </p>
+    </div>
+  </div>
   <nav class="nav-menu">
     <div class="toggle-menu-handle" onclick="toggleMenu()">MENU</div>
 
@@ -39,7 +53,7 @@
       Ce service vous est fourni avec des bisous.
       <div class="go-button" onclick="loadQuestion(11)">On commence ?</div>
     </div>
-    <div class="chart-section chart-section--leaderboard chart-section--yes-no">
+    <div class="chart-section chart-section--leaderboard chart-section--yes-no u-hidden">
       <div>
         <span onclick="previous()" >< Précédent</span>
         <span> | </span>
@@ -59,7 +73,7 @@
       </div>
     </div>
 
-    <div class="chart-section chart-section--wordcloud">
+    <div class="chart-section chart-section--wordcloud u-hidden">
       <div>
         <span onclick="previous()" >< Précédent</span>
         <span> | </span>
@@ -80,7 +94,7 @@
 
     </div>
 
-    <div class="chart-section chart-section--map">
+    <div class="chart-section chart-section--map u-hidden">
       <h2 class="question-label">Où se préoccupe-t-on le plus de... ?</h2>
       <div class="segment-container">
         <div class="segment-controls">
