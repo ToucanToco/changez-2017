@@ -82,7 +82,7 @@ function updateWordCloud(data, clear, label, value) {
       }
       var text = d3.select(".text-group")
         .selectAll(".wordcloud-text")
-        .data(words);
+        .data(words, function(d) { return d.answer;});
 
       text
         .enter()
@@ -108,7 +108,11 @@ function updateWordCloud(data, clear, label, value) {
             return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
         });
 
-      text.exit().remove();
+      text.exit()
+        .transition()
+        .duration(1000)
+        .attr('opacity', 0)
+        .remove();
   }
 }
 
