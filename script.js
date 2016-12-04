@@ -44,10 +44,22 @@ function updateWordCloud(data, clear, label, value) {
       return d[label] != 'notaword'
     })
     .sortBy(value, true)
-    .slice(0,50);
+    .slice(0,50)
+    .map(function (d) { d.answer = _.capitalize(d.answer); return d;})
 
-  var color = d3.scale.category20()
-    .domain(_data.slice(0,20).map(function(d){return d[label];}));
+  var accentColor = d3.rgb(234, 46, 46)
+  var baseColor = d3.rgb('#ffa0a0')
+
+
+  // var color = d3.scale.category20()
+  //   .domain(_data.slice(0,20).map(function(d){return d[label];}));
+
+  var colorInterpolator = d3.scale.linear()
+    .domain([0, 3])
+    .range([baseColor, accentColor]);
+  var color = d3.scale.quantile()
+    .domain(_data.map(function(d){return d[value];}))
+    .range(_.map(d3.range(4), colorInterpolator));
 
   // var sizeScale = d3.scale.linear()
   //   .range([0, 100])
@@ -61,8 +73,8 @@ function updateWordCloud(data, clear, label, value) {
     sizeScale.range([0.1, 50]);
   }
 
-  // Force width
-  // chartConfig.width = 767
+  // Force min width
+  chartConfig.width = chartConfig.width > 400 ? chartConfig.width : 400
 
   d3.select(".chart")
     .attr('width', chartConfig.width)
@@ -71,6 +83,7 @@ function updateWordCloud(data, clear, label, value) {
   d3.layout.cloud()
     .size([chartConfig.width -20, chartConfig.height - 30])
     .words(_data)
+    // .overflow(true)
     .spiral('archimedean')
     .padding(5)
     .rotate(function() { return Math.round(Math.random() - 0.4) * 90; })
@@ -96,7 +109,8 @@ function updateWordCloud(data, clear, label, value) {
         .append("text")
         .classed("wordcloud-text", true)
         .style("font-size", (function(d) { return sizeScale(d[value]) + 'px'; }))
-        .style("fill", function(d, i) { return color(i); })
+        .style("fill", function(d) { return color(d[value]).toString(); })
+        // .style("fill", function(d, i) { return color(i); })
         .attr("transform", function(d) {
             return "translate(0,0)rotate(0)";
         })
