@@ -71,6 +71,7 @@ body {
 
   @include respond-to(phone) {
     width: 100%;
+    padding-top: 40px;
   }
 }
 
@@ -147,10 +148,7 @@ img.banner {
 
 
 .intro {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  text-align: center;
   padding: 30px;
 }
 
@@ -212,6 +210,7 @@ $menu-width--mobile: 85%;
   }
 
   .credits {
+    background: white;
     height: 0px;
     overflow: hidden;
     transition: height 0.5s;

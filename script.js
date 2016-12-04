@@ -54,8 +54,15 @@ function updateWordCloud(data, clear, label, value) {
   //   .domain([0, d3.max(_data.map(function(d){return d[value];}))]);
   var sizeScale = d3.scale.log()
   //   .base(10)
-    .range([2, 100])
+    .range([1, 100])
     .domain([d3.min(_data.map(function(d){return d[value];})), d3.max(_data.map(function(d){return d[value];}))]);
+
+  if (window.innerWidth < 767) {
+    sizeScale.range([0.1, 50]);
+  }
+
+  // Force width
+  // chartConfig.width = 767
 
   d3.select(".chart")
     .attr('width', chartConfig.width)
