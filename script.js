@@ -494,6 +494,7 @@ function chooseSegment(data, group) {
   segments.enter()
     .append('span')
     .classed('segment', true)
+    .classed('btn', true)
     .attr('data-segment', function(d){return d;})
     .html(function(d){return d;})
     .on('click', function(d){
@@ -667,11 +668,25 @@ function getMyGroupData(data, filters) {
 //     });
 // }
 
+function displayIntro() {
+  d3.selectAll(".chart-section").classed("u-hidden", true);
+  d3.selectAll(".chart > *").remove();
+  d3.selectAll(".chart").attr('width', 0).attr('height', 0);
+  d3.selectAll(".intro").classed("u-hidden", false);
+}
+
+function loadIntro() {
+  displayIntro();
+  toggleMenu()
+}
+
 function init(){
   Sugar.extend({
     objectPrototype: true
   });
-  d3.selectAll(".chart-section").classed("u-hidden", true);
+
+  displayIntro();
+
   // Init QUESTIONS
   nestedMenu = d3.nest()
     .key(function(d) { return d.theme; })

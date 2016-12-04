@@ -74,6 +74,37 @@ body {
   }
 }
 
+button.btn {
+  cursor: pointer;
+}
+
+.highlights-btn {
+  display: flex;
+  flex-direction: row;
+
+  @include respond-to(phone) {
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    margin: 1em;
+  }
+}
+
+.highlight-btn__img {
+  margin-top: 0.5em;
+}
+
+.highlight-btn__img--top {
+  margin-bottom: 0.5em;
+  margin-top: 0;
+}
+
+img.banner {
+  margin-bottom: 1em;
+}
+
+
 .segment-container {}
 
 .chart-container {
@@ -121,19 +152,6 @@ body {
   justify-content: space-around;
   align-items: center;
   padding: 30px;
-}
-
-.go-button {
-  background-color: rgb(234, 46, 46);
-  padding: 5px;
-  color: white;
-  margin-top: 20px;
-  cursor: pointer;
-  width: 200px;
-  height: 75px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .wordcloud-text {

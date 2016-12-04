@@ -16,10 +16,10 @@
     <img src="logo.png"></img>
     <div class="credits">
       <p>
-        Analyse des données: ...
+        Analyse des données par <a href="">Frédéric Bardolle</a> et <a href="">Armand Gilles</a>
       </p>
       <p>
-        Data visualisations: ...
+        Data visualisations par <a href="">Sophie Despeisse</a> et <a href="">David Nowinsky</a>
       </p>
       <p>
         En savoir plus sur <a href="http://www.dataforgood.fr">Data for Good</a>
@@ -30,7 +30,13 @@
     <div class="toggle-menu-handle" onclick="toggleMenu()">MENU</div>
 
     <div class="menu-content">
-      <h3>Highlights</h3>
+      <ul class="menu-list menu-highlights-list">
+        <li><div class="menu-question-theme--label menu-question-item" onclick="loadIntro()">
+          Introduction
+        </div></li>
+      </ul>
+
+      <h3>Cartographie</h3>
       <ul class="menu-list menu-highlights-list">
         <li><div class="menu-question-theme--label menu-question-item" onclick="loadMap()">
           L'importance des causes par département
@@ -48,10 +54,28 @@
   <div class="main-column">
 
     <div class="intro">
-      Amusez-vous à explorer les réponses des utilisateurs de Change.org.
-      <br>
-      Ce service vous est fourni avec des bisous.
-      <div class="go-button" onclick="loadQuestion(11)">On commence ?</div>
+      <img class="banner" src="changez-header.jpg"></img>
+      <p>
+        Les data-visualiseurs de <em>Data For Good</em> vous proposent d'explorer de manière interactive les réponses à la consultation citoyenne de Change.org...
+      </p>
+      <div class='highlights-btn'>
+        <button class="btn btn-big btn-outline" onclick="loadQuestion(11)">
+          Un mot pour décrire le futur président ?
+          <img class="highlight-btn__img" src="wordcloud.jpg"></img>
+        </button>
+        <button class="btn btn-big btn-outline" onclick="loadMap()">
+          <img class="highlight-btn__img highlight-btn__img--top" src="map.jpg"></img>
+          Où la défense des droits humains tient-elle le plus à coeur ?
+        </button>
+        <button class="btn btn-big btn-outline" onclick="loadQuestion(6)">
+          Les programmes politiques : on y croit encore?
+          <img class="highlight-btn__img" src="yes-no.jpg"></img>
+        </button>
+      </div>
+      <div class="text-bar text-bar-center" style="width: 100%">
+        <span class="text">ou plutôt</span>
+      </div>
+      <button class="btn btn-big" onclick="toggleMenu()">Explorer toutes les questions...<br><span style="font-size: 2em; margin-top: 10px;">></span> </button>
     </div>
     <div class="chart-section chart-section--leaderboard chart-section--yes-no u-hidden">
       <div>
@@ -62,12 +86,12 @@
       <h2 class="question-label">Question: Quelles est la cause qui vous tient le plus à coeur ?</h2>
       <div class="segment-container">
         <div class="segment-controls">
-          <span data-segment="age" onclick="segmentBy('age')">Par âge</span>
-          <span data-segment="sexe" onclick="segmentBy('sexe')">Par sexe</span>
-          <span data-segment="tendance" onclick="segmentBy('tendance')">Par tendance politique</span>
-          <span data-segment="taille_commune" onclick="segmentBy('taille_commune')">Par taille de commune</span>
-          <span data-segment="revenu" onclick="segmentBy('revenu')">Par revenu</span>
-          <span data-segment="profession" onclick="segmentBy('profession')">Par profession</span>
+          <span class="btn" data-segment="age" onclick="segmentBy('age')">Par âge</span>
+          <span class="btn" data-segment="sexe" onclick="segmentBy('sexe')">Par sexe</span>
+          <span class="btn" data-segment="tendance" onclick="segmentBy('tendance')">Par tendance politique</span>
+          <span class="btn" data-segment="taille_commune" onclick="segmentBy('taille_commune')">Par taille de commune</span>
+          <span class="btn" data-segment="revenu" onclick="segmentBy('revenu')">Par revenu</span>
+          <span class="btn" data-segment="profession" onclick="segmentBy('profession')">Par profession</span>
         </div>
         <div class="info-segment"></div>
         <div class="choose-segment"></div>
@@ -83,12 +107,12 @@
       <h2 class="question-label">Question: Quelles est la cause qui vous tient le plus à coeur ?</h2>
       <div class="segment-container">
         <div class="segment-controls">
-          <span data-segment="age" onclick="segmentBy('age')">Par âge</span>
-          <span data-segment="sexe" onclick="segmentBy('sexe')">Par sexe</span>
-          <span data-segment="tendance" onclick="segmentBy('tendance')">Par tendance politique</span>
-          <span data-segment="taille_commune" onclick="segmentBy('taille_commune')">Par taille de commune</span>
-          <span data-segment="revenu" onclick="segmentBy('revenu')">Par revenu</span>
-          <span data-segment="profession" onclick="segmentBy('profession')">Par profession</span>
+          <span class="btn" data-segment="age" onclick="segmentBy('age')">Par âge</span>
+          <span class="btn" data-segment="sexe" onclick="segmentBy('sexe')">Par sexe</span>
+          <span class="btn" data-segment="tendance" onclick="segmentBy('tendance')">Par tendance politique</span>
+          <span class="btn" data-segment="taille_commune" onclick="segmentBy('taille_commune')">Par taille de commune</span>
+          <span class="btn" data-segment="revenu" onclick="segmentBy('revenu')">Par revenu</span>
+          <span class="btn" data-segment="profession" onclick="segmentBy('profession')">Par profession</span>
         </div>
         <div class="info-segment"></div>
         <div class="choose-segment"></div>
@@ -100,11 +124,11 @@
       <h2 class="question-label">Où se préoccupe-t-on le plus de... ?</h2>
       <div class="segment-container">
         <div class="segment-controls">
-          <span class="segment" onclick="filterMapBy('answer', 'La défense des droits humains')">La défense des droits humains</span>
-          <span class="segment" onclick="filterMapBy('answer', 'La justice sociale')">La justice sociale</span>
-          <span class="segment" onclick="filterMapBy('answer', 'La protection de l\'environnement')">La protection de l'environnement</span>
-          <span class="segment" onclick="filterMapBy('answer', 'L’emploi')">L’emploi</span>
-          <span class="segment" onclick="filterMapBy('answer', 'L’éducation')">L’éducation</span>
+          <span class="btn segment" onclick="filterMapBy('answer', 'La défense des droits humains')">La défense des droits humains</span>
+          <span class="btn segment" onclick="filterMapBy('answer', 'La justice sociale')">La justice sociale</span>
+          <span class="btn segment" onclick="filterMapBy('answer', 'La protection de l\'environnement')">La protection de l'environnement</span>
+          <span class="btn segment" onclick="filterMapBy('answer', 'L’emploi')">L’emploi</span>
+          <span class="btn segment" onclick="filterMapBy('answer', 'L’éducation')">L’éducation</span>
         </div>
         <i>Part des répondants pour lesquels cette cause est la plus importante</i>
       </div>
