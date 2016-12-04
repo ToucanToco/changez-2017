@@ -226,6 +226,12 @@ $menu-width--mobile: 85%;
     .credits {
       height: 60px;
     }
+
+    @include respond-to(phone) {
+      .credits {
+        height: 100px;
+      }
+    };
   }
 }
 
