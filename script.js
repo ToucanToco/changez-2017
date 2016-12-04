@@ -74,7 +74,7 @@ function updateWordCloud(data, clear, label, value) {
   }
 
   // Force min width
-  chartConfig.width = chartConfig.width > 400 ? chartConfig.width : 400
+  chartConfig.width = chartConfig.width > 450 ? chartConfig.width : 450
 
   d3.select(".chart")
     .attr('width', chartConfig.width)
