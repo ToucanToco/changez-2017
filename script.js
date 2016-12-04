@@ -555,7 +555,7 @@ function loadMap() {
   toggleMenu(false);
   console.log('Loading map');
   d3.select('.intro').classed('u-hidden', true);
-  d3.select(".chart-section").classed("u-hidden", true);
+  d3.selectAll(".chart-section").classed("u-hidden", true);
   d3.select(".chart-section.chart-section--map").classed("u-hidden", false);
 
   d3.selectAll(".chart *").remove();
